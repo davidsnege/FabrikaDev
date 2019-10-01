@@ -1,7 +1,7 @@
 # FabrikaDev
 
 
-![Capa](https://drive.google.com/file/d/1dpx2OzCAC1Ofs-3U-qlfgEZb8MC1VyW3/view?usp=sharing)
+![Capa](http://davidsnege.com/wp-content/uploads/2019/09/logo_escuro_full-300x68.png)
 
 Repositório para o canal de youtube com os códigos dos vídeos disponíveis para todos.
 
