@@ -1,7 +1,7 @@
 # FabrikaDev
 
 
-![Capa](https://drive.google.com/open?id=1dpx2OzCAC1Ofs-3U-qlfgEZb8MC1VyW3)
+![Capa](https://drive.google.com/file/d/1dpx2OzCAC1Ofs-3U-qlfgEZb8MC1VyW3/view?usp=sharing)
 
 Repositório para o canal de youtube com os códigos dos vídeos disponíveis para todos.
 
