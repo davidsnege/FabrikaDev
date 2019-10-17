@@ -1,7 +1,6 @@
 <!-- Incluimos en lo index todo lo que necessitamos para hacer funcionar -->
 <?php include "controller/bo_controller.php"; ?>
 
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,8 +18,8 @@
 
         <div class="container">
         <div class="row">
-            
-        <!-- Es solo un div para dar espacio y centro -->
+
+        <!-- Es solo un div para dar espacio y centro .. -->
         <div class="col-sm">
         </div>
 
