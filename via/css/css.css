@@ -1,0 +1,24 @@
+body, html {
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}
+
+.background {
+  background-image: url("https://www.via-camping.com/images/slide/default.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.bg-text {
+  color: #000;
+  background-color: #fbfbfbe8;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  top: 50%;
+  z-index: 2;
+}
