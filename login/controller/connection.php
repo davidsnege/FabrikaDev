@@ -2,8 +2,8 @@
 // Nostras variables para conexion con la base de dados estan aqui
 $host="localhost";
 $login="root";
-$senha="susenha";
-$banco="subasededados";
+$senha="";
+$banco="fabrika";
 // Nostra conexion esta aqui en esta linea
 $connection = new mysqli ($host, $login, $senha, $banco);
 // Verificamos por se acaso la conexion falla, y le enseñamos la mensagem de error de mysql

@@ -53,7 +53,7 @@ if(isset($_POST['tipo']) ){
 // Function LOGIN
     function login($user, $password, $connection){
         // Recibimos los parametros desde el case y los utilizamos para hacer nostro select a la base de dados.
-        $sql = "SELECT * FROM admin WHERE login = '$user' AND password = '$password'";
+        $sql = "SELECT * FROM fabrikausers WHERE Login = '$user' AND Senha = '$password'";
         // Hacemos la conexion y executamos la query
         $result = mysqli_query($connection, $sql);
         // Si tenemos dados en result
@@ -61,11 +61,11 @@ if(isset($_POST['tipo']) ){
             // Recogemos la variable
             while ($row = mysqli_fetch_array($result)){
                 // Comparamos para ver si el login y password estan correctos y existen en la base de dados
-                if($row['login'] == $user && $row['password'] == $password){
+                if($row['Login'] == $user && $row['Senha'] == $password){
                     // En este caso veradero iniciamos la session y damos los valores que determinamos como session valida
                     session_start();
-                    $_SESSION['login'] = $row['login'];
-                    $_SESSION['level'] = $row['level'];
+                    $_SESSION['login'] = $row['Login'];
+                    $_SESSION['level'] = $row['Level'];
                     $_SESSION['success'] = "1";
                 }
             }
@@ -76,6 +76,8 @@ if(isset($_POST['tipo']) ){
             session_start();
             $_SESSION['success'] = "0";
             $statusLogin = "0";
+            header('Location: index.php'); // Si cambiar su directorio se atente para esta direccion
+            exit;
         }
         // cerramos la conexion
         $connection->close();
