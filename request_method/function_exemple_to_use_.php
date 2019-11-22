@@ -97,12 +97,13 @@
 										";
 												$result = mysqli_query($connection, $queryPais);
 											  while ($row = mysqli_fetch_array($result)){
-															echo $row['id_camping']; echo "---";
-															echo $row['raisonSociale']; echo "---";
-															echo $row['id_pays']; echo "---";
-															echo $row['id_region']; echo "---";
-															echo $row['id_departement']; echo "---";
-															echo $row['id_commune']; echo " \n";
+															// echo $row['id_camping']; echo "---";
+															// echo $row['raisonSociale']; echo "---";
+															// echo $row['id_pays']; echo "---";
+															// echo $row['id_region']; echo "---";
+															// echo $row['id_departement']; echo "---";
+															// echo $row['id_commune']; echo " \n";
+															echo $row = json_encode($row, true);
 											  }
 										$connection->close();
 										$time_end = microtime(true);
@@ -132,12 +133,13 @@
 										";
 										$result = mysqli_query($connection, $queryRegion);
 										while ($row = mysqli_fetch_array($result)){
-													echo $row['id_camping']; echo "---";
-													echo $row['raisonSociale']; echo "---";
-													echo $row['id_pays']; echo "---";
-													echo $row['id_region']; echo "---";
-													echo $row['id_departement']; echo "---";
-													echo $row['id_commune']; echo " \n";
+													// echo $row['id_camping']; echo "---";
+													// echo $row['raisonSociale']; echo "---";
+													// echo $row['id_pays']; echo "---";
+													// echo $row['id_region']; echo "---";
+													// echo $row['id_departement']; echo "---";
+													// echo $row['id_commune']; echo " \n";
+													echo $row = json_encode($row, true);
 										}
 										$connection->close();
 										$time_end = microtime(true);
@@ -167,12 +169,13 @@
 										";
 										$result = mysqli_query($connection, $queryDepartamento);
 										while ($row = mysqli_fetch_array($result)){
-													echo $row['id_camping']; echo "---";
-													echo $row['raisonSociale']; echo "---";
-													echo $row['id_pays']; echo "---";
-													echo $row['id_region']; echo "---";
-													echo $row['id_departement']; echo "---";
-													echo $row['id_commune']; echo " \n";
+													// echo $row['id_camping']; echo "---";
+													// echo $row['raisonSociale']; echo "---";
+													// echo $row['id_pays']; echo "---";
+													// echo $row['id_region']; echo "---";
+													// echo $row['id_departement']; echo "---";
+													// echo $row['id_commune']; echo " \n";
+															echo $row = json_encode($row, true);
 										}
 										$connection->close();
 										$time_end = microtime(true);
@@ -202,12 +205,13 @@
 										";
 										$result = mysqli_query($connection, $queryPoblacion);
 										while ($row = mysqli_fetch_array($result)){
-													echo $row['id_camping']; echo "---";
-													echo $row['raisonSociale']; echo "---";
-													echo $row['id_pays']; echo "---";
-													echo $row['id_region']; echo "---";
-													echo $row['id_departement']; echo "---";
-													echo $row['id_commune']; echo " \n";
+													// echo $row['id_camping']; echo "---";
+													// echo $row['raisonSociale']; echo "---";
+													// echo $row['id_pays']; echo "---";
+													// echo $row['id_region']; echo "---";
+													// echo $row['id_departement']; echo "---";
+													// echo $row['id_commune']; echo " \n";
+															echo $row = json_encode($row, true);
 										}
 										$connection->close();
 										$time_end = microtime(true);
@@ -237,12 +241,13 @@
 										";
 										$result = mysqli_query($connection, $queryCamping);
 										while ($row = mysqli_fetch_array($result)){
-													echo $row['id_camping']; echo "---";
-													echo $row['raisonSociale']; echo "---";
-													echo $row['id_pays']; echo "---";
-													echo $row['id_region']; echo "---";
-													echo $row['id_departement']; echo "---";
-													echo $row['id_commune']; echo " \n";
+													// echo $row['id_camping']; echo "---";
+													// echo $row['raisonSociale']; echo "---";
+													// echo $row['id_pays']; echo "---";
+													// echo $row['id_region']; echo "---";
+													// echo $row['id_departement']; echo "---";
+													// echo $row['id_commune']; echo " \n";
+															echo $row = json_encode($row, true);
 										}
 										$connection->close();
 										$time_end = microtime(true);
