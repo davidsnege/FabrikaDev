@@ -1,0 +1,120 @@
+-Criando QR Code com php - David Snege
+
+-Biblioteca: http://phpqrcode.sourceforge.net/index.php#home
+
+-O QR code(Código de resposta rápida) pode ser encontrado hoje em diversos tipos de produtos, posters/banners, sites, cartões de visita, etc. Basicamente ele é um código de barras bidimensional que pode armazenar diversos tipos de informações e podem ser lidos por diversos dispositivos com câmera como celulares e tablets, basta estes terem o aplicativo especifico.
+
+-O QR code é composto de vários pixels, sendo alguns com informações sobre o QR Code como versão, informações de alinhamento e tipo dos dados e informações de correção de erro e pode ir de 21×21 até 117×177 dependendo da versão.
+
+-Vamos então a exemplos, primeiramente baixe a biblioteca PHPQRcode, descompacte na pasta e inclua a biblioteca(qrlib.php) em seu código.
+
+2
+include('phpqrcode/qrlib.php');
+QRcode::png("Olá Visitante!!!");
+
+-Veja o exemplo
+-O exemplo acima irá gerar uma imagem PNG no stream, ou seja o PHP vai gerar um arquivo de imagem e imediatamente enviar para o navegador. Para colocar ele dentro uma página HTML devemos inserir o endereço do script php no src de uma tag img como abaixo
+
+1
+<img src="exemplo1.php">
+-Caso quisermos salvar este QR code como um arquivo de imagem PNG, basta passar o caminho absoluto onde será salvo o arquivo como sergundo parâmetro, lembrando que a pasta onde este arquivo será gravado deve ter permissão de escrita.
+
+1
+2
+3
+4
+5
+<?php
+include('phpqrcode/qrlib.php');
+QRcode::png("http://www.botecodigital.info", "QR_code.png");
+?>
+<img src="QR_code.png">
+
+-Veja o exemplo
+-Se você ler o QR code com um aplicativo como Barcode Scanner verá que o aplicativo consegui identificar que o conteudo do QR code é uma URI e sugere a opção de abrir no navegador, podemos gerar QR code com outros tipos de informações, como:
+
+-telefone
+
+1
+QRcode::png("tel:(55) 1234-4321");
+Veja o examplo
+E-mail
+
+6
+include('phpqrcode/qrlib.php');
+ 
+$email = "contato@botecodigital.info";
+$assunto = "Mensagem de Teste";
+$corpo = "Um simples e-mail de teste! :)";
+QRcode::png("mailto:" .$email."?subject=".$assunto."&body=".$corpo );
+
+-Veja o examplo
+-Cartão de Visita
+
+14
+$nome = 'Rodrigo'; 
+$fonetrabalho = '(55)1234-4321'; 
+$fonecasa = '(55) 2312-5678';
+$cel = '(55) 9999-9999';
+$email = 'contato@botecodigital.info';
+ 
+$cartao  = 'BEGIN:VCARD'."\n"; 
+$cartao .= 'FN:'.$nome."\n"; 
+$cartao .= 'TEL;WORK;VOICE:'.$fonetrabalho."\n"; 
+$cartao .= 'TEL;HOME;VOICE:'.$fonecasa."\n"; 
+$cartao .= 'TEL;TYPE=cell:'.$cel."\n"; 
+$cartao .= 'EMAIL:'.$email."\n"; 
+$cartao .= 'END:VCARD'; 
+QRcode::png( $cartao );
+
+-Veja o examplo
+-skype
+
+3
+$skypeUserName = 'rodrigoaramburu';
+$content = 'skype:'.urlencode($skypeUserName).'?call'; 
+QRcode::png( $content );
+
+-Veja o examplo
+-Correção de Erro
+-Como o QR code foi desenvolvido para ser colocado em etiquetas, estas podem ser danificadas perdendo parte de sua informação, devido a isso ele conta com informação redundante que pode ter vários níveis, sendo que quando maior a informação redundante menos de informação util podemos colocar no QR code.
+
+-Nível L: conta com 7% de poder de correção;
+-Nível M: conta com 15% de poder de correção;
+-Nível Q: conta com 25% de poder de correção;
+-Nível H: conta com 30% de poder de correção.
+-Podemos configurar o nível de correção através do terceiro parâmetro.
+
+11
+$codeContents = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Proin nibh augue, suscipit a'; 
+ 
+QRcode::png($codeContents, 'level_L.png', QR_ECLEVEL_L); 
+QRcode::png($codeContents, 'level_M.png', QR_ECLEVEL_M); 
+QRcode::png($codeContents, 'level_Q.png', QR_ECLEVEL_Q); 
+QRcode::png($codeContents, 'level_H.png', QR_ECLEVEL_H); 
+ 
+echo '<img src="level_L.png" />'; 
+echo '<img src="level_M.png" />'; 
+echo '<img src="level_Q.png" />'; 
+echo '<img src="level_H.png" />';
+
+-Veja o examplo
+-Tamanho da imagem gerada
+-Como pode-se colocar um QR code desde placa mãe até em um outdoor, devemos poder gerar a imagem de tamanho diferente através do quarto parâmetro .
+
+13
+include('phpqrcode/qrlib.php');
+ 
+$codeContents = 'http://www.botecodigital.info'; 
+ 
+QRcode::png($codeContents, 'tamanho1.png', QR_ECLEVEL_L , 1); 
+QRcode::png($codeContents, 'tamanho2.png', QR_ECLEVEL_L , 2); 
+QRcode::png($codeContents, 'tamanho3.png', QR_ECLEVEL_L , 3); 
+QRcode::png($codeContents, 'tamanho4.png', QR_ECLEVEL_L , 4); 
+ 
+echo '<img src="tamanho1.png" />'; 
+echo '<img src="tamanho2.png" />'; 
+echo '<img src="tamanho3.png" />'; 
+echo '<img src="tamanho4.png" />';
+
+Use com sabedoria.
