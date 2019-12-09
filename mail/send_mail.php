@@ -19,6 +19,9 @@ $mensaje = '
 </html>
 ';
 
+// Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
+$mensaje = wordwrap($mensaje, 70, "\r\n");
+
 // Para enviar un correo HTML, debe establecerse la cabecera Content-type
 $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
 $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
@@ -26,8 +29,12 @@ $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 // Cabeceras adicionales
 $cabeceras .= 'To:  <'.$para.'>' . "\r\n";
 $cabeceras .= 'From: David <'.$desde.'>' . "\r\n";
+$cabeceras .= 'Reply-To: David <'.$desde.'>' . "\r\n";
+$cabeceras .= 'X-Mailer: PHP/' . phpversion() . "\r\n";
 // $cabeceras .= 'Cc: birthdayarchive@example.com' . "\r\n";
 // $cabeceras .= 'Bcc: birthdaycheck@example.com' . "\r\n";
+
+
 
 // Enviarlo
 mail($para, $assunto, $mensaje, $cabeceras);

