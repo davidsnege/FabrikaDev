@@ -1,9 +1,8 @@
 ![Capa](http://davidsnege.com/wp-content/uploads/2019/10/1.png)
-![Capa](http://davidsnege.com/wp-content/uploads/2019/09/logo_escuro_full-300x68.png)
 
-# Onde você esta? 
+# Onde você esta?
 
-Repositório para o canal de youtube com os códigos dos vídeos tutoriais. 
+Repositório para o canal de youtube com os códigos dos vídeos tutoriais.
 O link para o canal: https://www.youtube.com/channel/UC0lgoT6I-SaX2dcimts4qRA
 
 # Qual o Objetivo.
