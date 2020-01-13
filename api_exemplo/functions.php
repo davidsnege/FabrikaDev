@@ -1,9 +1,41 @@
 <?php
 	//╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 	//║  API - Functions Generales para Busca de Campings por Seleccion
-	//║  Actualizado en: 22/11/19
+	//║  Actualizado en: 13/01/20
 	//╚══════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 	//╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+	//╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+	//║  Verificamos la IP de acesso
+	//║  La IP del Cliente
+	//╚══════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+	//╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+
+			if (isset($_SERVER["HTTP_CLIENT_IP"]))
+			{
+					echo 'Su IP de acesso és: ' . $_SERVER["HTTP_CLIENT_IP"];
+			}
+			elseif (isset($_SERVER["HTTP_X_FORWARDED_FOR"]))
+			{
+					echo 'Su IP de acesso és: ' . $_SERVER["HTTP_X_FORWARDED_FOR"];
+			}
+			elseif (isset($_SERVER["HTTP_X_FORWARDED"]))
+			{
+					echo 'Su IP de acesso és: ' . $_SERVER["HTTP_X_FORWARDED"];
+			}
+			elseif (isset($_SERVER["HTTP_FORWARDED_FOR"]))
+			{
+					echo 'Su IP de acesso és: ' . $_SERVER["HTTP_FORWARDED_FOR"];
+			}
+			elseif (isset($_SERVER["HTTP_FORWARDED"]))
+			{
+					echo 'Su IP de acesso és: ' . $_SERVER["HTTP_FORWARDED"];
+			}
+			else
+			{
+					echo 'Su IP de acesso és: ' . $_SERVER["REMOTE_ADDR"];
+			}
+
+	//╚══════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 	//╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 	//║  Protegemos la API verificando el Methodo utilizado y desde donde viene, impedimos que se aceda desde la
 	//║  URL de su sitio web
