@@ -43,12 +43,20 @@
 	//╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 			if( $_SERVER['REQUEST_METHOD'] != 'POST' ){
 				echo "\n Error 1 - This method is not allowed or you are not authorized to access this API. Please refer to the documentation or contact the administrator.";
+				header("HTTP/1.0 405 Method Not Allowed");
+
 			}elseif( !isset($_POST['Authorization']) ){
 				echo "\n Error 2 - You do not have permission to access this API or your call is missing parameters.";
+				header("HTTP/1.0 203 Non-Authoritative Information");
+
 			}elseif( $_POST['Authorization'] != 'AdminUser' ){
 				echo "\n Error 3 - You do not have permission to access this API, your username or password is not allowed from where the call to the API came from, please contact Admin for access.";
+				header("HTTP/1.0 401 Unauthorized");
+
 			}elseif( isset($_POST['Documentation']) ){
 				echo "\n Option 4 - Mode Documentation Activated. (FR / ES / PT)";
+				header("HTTP/1.0 200 OK");
+
 				documentation();
 			}else{
 						//╔════════════════════════════════════════════════════════════════════════════════════════════════╗
