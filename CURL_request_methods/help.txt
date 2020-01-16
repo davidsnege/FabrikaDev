@@ -1,0 +1,286 @@
+5 ejemplos de PHP cURL
+
+Trabajar en el lado del servidor no implica necesariamente que toda la información requerida deba estar presente en la base de datos del sitio en el que estamos trabajando. De hecho, cada vez más partes de la información que se usa en el lado del servidor proviene de fuentes externas, a menudo a través de una API que permite algún tipo de servicio para proporcionar información al sitio web sin tener acceso a la base de datos en el sitio remoto. Para utilizar esta información, podemos usar la extensión PHP incorporada cURL .
+
+cURL es una extensión de PHP que nos permite recibir y enviar información a través de la sintaxis de URL. Al hacerlo, cURL facilita la comunicación entre diferentes sitios web y dominios. Este tutorial incluye 5 casos comunes para el uso de cURL, e incluyen:
+
+---Descargar el contenido de un sitio web
+---Descargar un archivo de un sitio web
+---Envío automático de formulario
+---Autenticación
+---Uso de cookies.
+
+# ¿Cómo funciona la extensión cURL?
+cURL funciona enviando una solicitud a un sitio web, y este proceso incluye las siguientes cuatro partes:
+
+1. Inicialización.
+$handle = curl_init();
+
+2. Configuración de las opciones. Hay muchas opciones, por ejemplo, una opción que define la URL.
+curl_setopt($handle, CURLOPT_URL, $url);
+
+3. Ejecución con curl_exec () .
+$data = curl_exec($handle);
+
+4. Liberar el mango de cURL.
+curl_close($handle);
+
+La segunda parte es la más interesante porque nos permite definir cómo funciona cURL de una manera altamente precisa, utilizando las muchas opciones que tiene para ofrecer.
+
+# 1. ¿Cómo descargar el contenido de un sitio web remoto a un archivo local?
+Para descargar el contenido de un sitio web remoto, debemos definir las siguientes opciones:
+
+CURLOPT_URL : define la URL remota.
+
+CURLOPT_RETURNTRANSFER : habilita la asignación de los datos que descargamos del sitio remoto a una variable. En este ejemplo, asignamos los datos a la variable $ output .
+
+////////////////////////////////////////////////////////////////////////////////
+<?php
+$handle = curl_init();
+
+$url = "https://www.ladygaga.com";
+
+// Set the url
+curl_setopt($handle, CURLOPT_URL, $url);
+// Set the result output to be a string.
+curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+
+$output = curl_exec($handle);
+
+curl_close($handle);
+
+echo $output;
+////////////////////////////////////////////////////////////////////////////////
+
+Cuando imprimimos el valor de la variable $ output en la pantalla, veremos la versión local del sitio web para el mejor cantante del mundo.
+
+Ejemplo del contenido del sitio web que descargamos
+Las opciones se pueden escribir de manera más compacta usando curl_setopt_array () , que es una función cURL que reúne las opciones en una matriz.
+
+////////////////////////////////////////////////////////////////////////////////
+curl_setopt_array($handle,
+  array(
+      CURLOPT_URL            => $url,
+      CURLOPT_RETURNTRANSFER => true
+  )
+);
+////////////////////////////////////////////////////////////////////////////////
+
+# 2. ¿Cómo descargar un archivo desde un sitio remoto usando cURL?
+Se puede descargar un archivo remoto a nuestro servidor, si la opción CURLOPT_ FILE está configurada. Por ejemplo, el siguiente código descarga el libro "La Divina Comedia" del Proyecto Gutenberg en un archivo the_divine_comedy.html en nuestro servidor:
+
+////////////////////////////////////////////////////////////////////////////////
+<?php
+// The distant site url.
+$url = "https://www.gutenberg.org/files/46852/46852-h/46852-h.htm";
+// The file on our server.
+$file = __DIR__ . DIRECTORY_SEPARATOR . "the_divine_comedy.html";
+$handle = curl_init();
+
+// Open the file on our server for writing.
+$fileHandle = fopen($file, "w");
+
+curl_setopt_array($handle,
+  array(
+     CURLOPT_URL           => $url,
+      CURLOPT_FILE => $fileHandle,
+  )
+);
+
+$data = curl_exec($handle);
+
+curl_close($handle);
+
+fclose($fileHandle);
+////////////////////////////////////////////////////////////////////////////////
+
+# Manejo de la respuesta devuelta
+Para obtener los parámetros de la respuesta para que sea monitoreada y depurada, necesitamos establecer la opción CURLOPT_HEADER . Por ejemplo:
+
+////////////////////////////////////////////////////////////////////////////////
+<?php
+$url = ""https://www.gutenberg.org/files/41537/41537-h/41537-h.htm";
+
+$file = __DIR__ . DIRECTORY_SEPARATOR . "the_divine_comedy.html";
+
+$handle = curl_init();
+
+$fileHandle = fopen($file, "w");
+
+curl_setopt_array($handle,
+  array(
+    CURLOPT_URL => $url,
+    CURLOPT_FILE  => $fileHandle,
+    CURLOPT_HEADER => true
+  )
+);
+
+$data = curl_exec($handle);
+////////////////////////////////////////////////////////////////////////////////
+
+Para obtener información adicional sobre la solicitud, utilizamos el comando curl_getinfo que nos permite recibir información técnica importante sobre la respuesta, incluido el código de estado (200 para el éxito) y el tamaño del archivo descargado.
+
+////////////////////////////////////////////////////////////////////////////////
+$responseCode   =
+    curl_getinfo($handle,
+        CURLINFO_HTTP_CODE
+);
+
+$downloadLength =
+    curl_getinfo($handle,
+         CURLINFO_CONTENT_LENGTH_DOWNLOAD
+);
+////////////////////////////////////////////////////////////////////////////////
+
+Además, también podemos usar los comandos: curl_error y curl_errno para depurar la respuesta y recibir mensajes informativos de error.
+
+////////////////////////////////////////////////////////////////////////////////
+if(curl_errno($handle))
+{
+  print curl_error($handle);
+}
+////////////////////////////////////////////////////////////////////////////////
+
+Veamos el código completo:
+
+////////////////////////////////////////////////////////////////////////////////
+<?php
+$url = "https://www.gutenberg.org/files/46852/46852-h/46852-h.htm";
+$file = __DIR__ . DIRECTORY_SEPARATOR . "the_divine_comedy.html";
+$handle = curl_init();
+$fileHandle = fopen($file, "w");
+curl_setopt_array($handle,
+  array(
+    CURLOPT_URL    => $url,
+    CURLOPT_FILE   => $fileHandle,
+    CURLOPT_HEADER => true
+  )
+);
+
+$data = curl_exec($handle);
+$responseCode   = curl_getinfo($handle, CURLINFO_HTTP_CODE);
+$downloadLength = curl_getinfo($handle, CURLINFO_CONTENT_LENGTH_DOWNLOAD);
+if(curl_errno($handle))
+{
+  print curl_error($handle);
+}
+else
+{
+  if($responseCode == "200") echo "successful request";
+  echo " # download length : " . $downloadLength;
+  curl_close($handle);
+  fclose($fileHandle);
+}
+////////////////////////////////////////////////////////////////////////////////
+
+
+# 3. ¿Cómo enviar formularios con cURL?
+Hasta este momento, hemos demostrado el uso del método GET de HTTP (que generalmente se usa para mirar y descargar contenido). cURL también puede hacer uso del método POST de HTTP para enviar formularios.
+
+Para demostrar el envío del formulario con cURL, necesitamos crear los siguientes dos archivos:
+
+index.php en el que ponemos el script cURL.
+form.php en el que ponemos el formulario a enviar.
+El form.php se encontrará en realidad en un servidor remoto (aunque, por el bien del ejemplo, ambos archivos pueden colocarse en el mismo servidor). Además, para el ejemplo, utilizaremos un formulario con 3 campos: nombre, apellido y enviar.
+
+////////////////////////////////////////////////////////////////////////////////
+<?php
+if(isset($_POST["submit"]))
+{
+  echo "Full name is " . $_POST["firstName"] .
+     "  " . $_POST["lastName"];
+  exit;
+}
+?>
+
+<html>
+<body>
+<form method = "POST" action = "" >
+  <input  name="firstName"  type="text">
+  <input  name="lastName"  type="text">
+  <input  type="submit"  name="submit"  value="שלח" >
+</form>
+</body>
+</html>
+////////////////////////////////////////////////////////////////////////////////
+
+Para enviar el formulario, se deben configurar las siguientes opciones:
+
+CURLOPT_POST : establece que la solicitud esté en modo de publicación.
+CURLOPT_POSTFIELDS : recibe la matriz asociativa de los campos que queremos publicar. Las claves de la matriz se nombran después del nombre de los campos del formulario.
+
+////////////////////////////////////////////////////////////////////////////////
+<?php
+$handle = curl_init();
+$url = "https://localhost/curl/theForm.php";
+// Array with the fields names and values.
+// The field names should match the field names in the form.
+$postData = array(
+  'firstName' => 'Lady',
+  'lastName'  => 'Gaga',
+  'submit'    => 'ok'
+);
+curl_setopt_array($handle,
+  array(
+     CURLOPT_URL => $url,
+     // Enable the post response.
+    CURLOPT_POST       => true,
+    // The data to transfer with the response.
+    CURLOPT_POSTFIELDS => $postData,
+    CURLOPT_RETURNTRANSFER     => true,
+  )
+);
+$data = curl_exec($handle);
+curl_close($handle);
+echo $data;
+////////////////////////////////////////////////////////////////////////////////
+
+# 4. ¿Cómo realizar la autenticación HTTP básica con cURL?
+Para autenticarse con cURL, se deben configurar las siguientes 3 opciones:
+
+CURLOPT_HTTPAUTH
+CURLOPT_USERPWD : a través del cual definimos el nombre de usuario y la contraseña.
+CURLOPT_RETURNTRANSFER
+Veamos el código:
+
+////////////////////////////////////////////////////////////////////////////////
+curl_setopt_array($handle,
+  array(
+    CURLOPT_URL => $url,
+   CURLOPT_HTTPAUTH => CURLAUTH_ANY,
+   CURLOPT_USERPWD  => "$username:$password",
+   CURLOPT_RETURNTRANSFER   => true,
+  )
+);
+////////////////////////////////////////////////////////////////////////////////
+
+# 5. ¿Cómo manejar las cookies con cURL?
+El uso de cookies permite a un sitio web identificar a los visitantes que regresan y a los usuarios autenticados. Con este fin, cURL nos proporciona un mecanismo a través del cual podemos guardar cookies.
+
+Las dos opciones principales que nos permiten manejar las cookies son:
+
+CURLOPT_COOKIEJAR - Define el archivo requerido para escribir las cookies.
+CURLOPT_COOKIEFILE : define el archivo desde el que se leerán las cookies.
+El siguiente código de ejemplo escribe las cookies en un archivo cookie.txt en la primera visita y luego lee los datos en visitas posteriores.
+
+////////////////////////////////////////////////////////////////////////////////
+<?php
+$handle = curl_init();
+$url = "https://www.ladygaga.com/artrave-the-artpop-ball";
+$file = __DIR__ . DIRECTORY_SEPARATOR . "cookie.txt";
+curl_setopt_array($handle,
+  array(
+    CURLOPT_URL => $url,
+     // The file to which the cookies need to be written.
+    CURLOPT_COOKIEFILE => $file,
+    // The file freom which the cookies need to be read.
+    CURLOPT_COOKIEJAR  => $file,
+    CURLOPT_RETURNTRANSFER     => true,
+  )
+);
+$data = curl_exec($handle);
+curl_close($handle);
+////////////////////////////////////////////////////////////////////////////////
+
+Conclusión
+El uso de la extensión cURL de PHP nos proporciona una forma conveniente de comunicarnos con otros sitios web, particularmente con las API proporcionadas por un tercero. En el próximo tutorial, aprenderemos cómo solicitar detalles privados a nombre de los usuarios que inician sesión en nuestro sitio web con su cuenta de GitHub. Se realizará mediante el uso de la API de Github y con la ayuda de cURL. El tutorial será un buen punto de partida para aprender cómo hacer un inicio de sesión social con cualquier red social.
