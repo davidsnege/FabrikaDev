@@ -11,6 +11,10 @@ O Objetivo deste repositório é manter um local único para todos que assistem 
 
 Todo material é livre para cópias, redistribuição ou comercial se necessário, sómente pedimos que se cite a fonte dos códigos e esta mesma página de repositório.
 
+# Como está organizado.
+
+No geral está organizado por pastas com o nome da respectiva linguagem, dentro você vai ter mais pastas com seus scripts dentro, e dentro onde ficam os scripts pretendo criar um Readme ou um Help para quem precisar de um suporte, além de com o tempo eu pretendo deixar comentários bem feitos sobre cada pedacinho do código, o objetivo é deixar código para quem precisa aprender, então comentários longos vão existir.
+
 # É bom saber.
 
 O material pode crescer muito com o tempo, mas implementações não estarão em nossos planos pois outras pessoas precisam usar o mesmo material que existe nos vídeos.
