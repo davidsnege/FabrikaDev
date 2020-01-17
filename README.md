@@ -13,7 +13,7 @@ Todo material é livre para cópias, redistribuição ou comercial se necessári
 
 # Como está organizado.
 
-No geral está organizado por pastas com o nome da respectiva linguagem, dentro você vai ter mais pastas com seus scripts dentro, e dentro onde ficam os scripts pretendo criar um Readme ou um Help para quem precisar de um suporte, além de com o tempo eu pretendo deixar comentários bem feitos sobre cada pedacinho do código, o objetivo é deixar código para quem precisa aprender, então comentários longos vão existir.
+No geral está organizado por pastas com o nome da respectiva linguagem, dentro de cada pasta de lingugem você vai ter mais pastas com seus scripts dentro, e onde ficam os scripts pretendo criar um Readme ou um Help para quem precisar de um suporte, e com o tempo eu pretendo deixar comentários bem feitos sobre cada pedacinho do código, o objetivo é deixar código para quem precisa aprender, então comentários longos vão existir.
 
 # É bom saber.
 
