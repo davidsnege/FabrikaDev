@@ -1,4 +1,6 @@
 <?php
+$headers = 'Content-Type: text/plain; charset=utf-8' . "\r\n";
+
 $desde = $_POST['desde'];
 $para = $_POST['para'];
 $assunto = $_POST['assunto'];
@@ -37,5 +39,13 @@ $cabeceras .= 'X-Mailer: PHP/' . phpversion() . "\r\n";
 
 
 // Enviarlo
-mail($para, $assunto, $mensaje, $cabeceras);
+// mail($para, $assunto, $mensaje, $cabeceras);
+
+$success = mail($para, $assunto, $mensaje, $cabeceras);
+if (!$success) {
+    $errorMessage = error_get_last()['message'];
+}else{
+  echo "Enviado com sucesso!";
+}
+
 ?>
