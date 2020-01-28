@@ -1,3 +1,10 @@
 
 
 Usando Xampp configurar o servidor Mercury ou o arquivo de configuração do apache xampp
+
+Usando a Biblioteca do PHPmailer que esta dentro da pasta PHPMailer_git
+https://github.com/PHPMailer/PHPMailer
+
+Se atentar para o uso instalando desde composer
+
+Composer require phpmailer/phpmailer
