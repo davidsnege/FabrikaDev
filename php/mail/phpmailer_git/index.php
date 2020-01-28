@@ -24,7 +24,7 @@
 //╚══════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
   //Para testear, cambiar para GET
-    if( $_SERVER['REQUEST_METHOD'] != 'GET' ){
+    if( $_SERVER['REQUEST_METHOD'] != 'POST' ){
       echo "\n Error 1 - This method is not allowed or you are not authorized to access this API. Please refer to the documentation or contact the administrator.<br>";
       header("HTTP/1.0 405 Method Not Allowed");
     }else{
@@ -174,7 +174,7 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
+    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = $host;                                  // Set the SMTP server to send through
     $mail->SMTPAuth   = $smtpAuth;                              // Enable SMTP authentication
