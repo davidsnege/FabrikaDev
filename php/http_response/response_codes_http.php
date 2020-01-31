@@ -6,7 +6,7 @@ header("HTTP/1.0 200 OK");
 // Neste caso podemos passar sempre HTTP/1.0 usar um (1) espaço, colocar o status em seu número, e depois mais um (1) espaço, e por fim seu texto que no caso acima é "OK" (sem aspas), mas todo este conteúdo deve estar entre aspas.
 
 
-//OU PODEMOS VERIFICA O STATUS REAL QUE ESTA SE PASSANDO USANDO O QUE TEMOS NESTE IF ABAIXO
+//OU PODEMOS VERIFICAR O STATUS REAL QUE ESTA SE PASSANDO USANDO O QUE TEMOS NESTE IF ABAIXO
 
     if (!function_exists('http_response_code')) {
         function http_response_code($code = NULL) {

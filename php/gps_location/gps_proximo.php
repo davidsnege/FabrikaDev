@@ -1,4 +1,9 @@
 <?php
+// Ver como implementar isso nas aulas, pode ser util, muito util, mas o codigo nao esta feito para aulas e nem para amadores
+
+
+
+
 //COSENO FUNCTION - CALCULA LA DISTANCIA DE LOS CAMPINGS EN RELACION A COMMUNE BUSCADA
 function distanceCalculation($point1_lat, $point1_long, $point2_lat, $point2_long, $unit = 'km', $decimals = 2) {
 // Cálculo de la distancia en grados
@@ -34,7 +39,7 @@ function distanceCalculation($point1_lat, $point1_long, $point2_lat, $point2_lon
     $minlon = $lonCommune-00.5800;
 
 
-//BUSCAMOS NA BASE "BETWEEN" PORQUE QUEREMOS LATITUDES E LONGITUDES ENTRE NOSSOS VALORES maxlat E maxlon   
+//BUSCAMOS NA BASE "BETWEEN" PORQUE QUEREMOS LATITUDES E LONGITUDES ENTRE NOSSOS VALORES maxlat E maxlon
     $query = "SELECT SUASCOLUNAS FROM SUABASE
     WHERE latitude BETWEEN $minlat AND $maxlat
     AND longitude BETWEEN $minlon AND $maxlon";
@@ -46,7 +51,7 @@ function distanceCalculation($point1_lat, $point1_long, $point2_lat, $point2_lon
 //CRIAMOS OS PONTOS APRA PASSAR A FUNCAO
     $point1 = array("lat" => $latCommune, "long" => $lonCommune); // Commune
     $point2 = array("lat" => $camping["latitud"], "long" => $camping["longitud"]); // Campings
-//PASSAMOS OS DADOS A FUNCAO PARA RECEBER O VALOR    
+//PASSAMOS OS DADOS A FUNCAO PARA RECEBER O VALOR
     $meuresultado["distancia"] = distanceCalculation($point1['lat'], $point1['long'], $point2['lat'], $point2['long']);
 //FECHAMOS A CONEXAO
     $connection->close();

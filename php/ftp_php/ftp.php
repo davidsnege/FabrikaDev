@@ -1,10 +1,10 @@
 <?php
 
-// abrir un archivo para su lectura
+// abrir un archivo para su lectura -- 
 $file = 'test.txt';
 $fp = fopen($file, 'r');
 
-
+// configurações de conexão ao FTP
 $ftp_server = "185.66.41.48";
 $ftp_user_name = "davidsne";
 $ftp_user_pass = "gnMH29aa";
