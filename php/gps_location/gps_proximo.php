@@ -31,10 +31,10 @@ function distanceCalculation($point1_lat, $point1_long, $point2_lat, $point2_lon
     $latCommune=$gpsinit['latitude'];
     $lonCommune=$gpsinit['longitude'];
 
-//CAMBIAMOS ACRESCENDO E DISMINUINDO LO RANGO EN LATITUDE
+//CAMBIAMOS ACRESCENDO E DISMINUINDO LO RANGO EN LATITUDE (para mostrar mais ou menos resultados)
     $maxlat = $latCommune+00.5800;
     $minlat = $latCommune-00.5800;
-//CAMBIAMOS ACRESCENDO E DISMINUINDO LO RANGO EN LONGITUDE
+//CAMBIAMOS ACRESCENDO E DISMINUINDO LO RANGO EN LONGITUDE (para mostrar mais ou menos resultados)
     $maxlon = $lonCommune+00.5800;
     $minlon = $lonCommune-00.5800;
 
