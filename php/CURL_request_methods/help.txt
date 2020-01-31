@@ -1,4 +1,4 @@
-
+#Verificar exemplos dentro do Postman para garantir que funciona
 
 Trabajar en el lado del servidor no implica necesariamente que toda la información requerida deba estar presente en la base de datos del sitio en el que estamos trabajando. De hecho, cada vez más partes de la información que se usa en el lado del servidor proviene de fuentes externas, a menudo a través de una API que permite algún tipo de servicio para proporcionar información al sitio web sin tener acceso a la base de datos en el sitio remoto. Para utilizar esta información, podemos usar la extensión PHP incorporada cURL .
 
