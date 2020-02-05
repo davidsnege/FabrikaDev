@@ -1,4 +1,7 @@
 <?php
+
+header('Content-Type: text/html; charset=utf-8');
+
 //╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 //║  Cargamos las Classes que necessitamos de PHPMailer
 //╚══════════════════════════════════════════════════════════════════════════════════════════════════════════╝
@@ -141,6 +144,7 @@
 				    $mail->Password   = $password;                                // SMTP password
 				    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;           // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
 				    $mail->Port       = $port_smtp;                               // TCP port to connect to
+						$mail->CharSet = 'UTF-8';																			//UTF-8 Compatible
 
 				    //Recipients
 				    $mail->setFrom($setFrom_mail, $setFrom_name);
