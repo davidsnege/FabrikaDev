@@ -23,7 +23,7 @@
             }
 
             // Armazenamos o valor aqui em value
-            $value = "LOG: ". generateRandomString() . "\n";
+            $value = "LOG ID: ". generateRandomString() . "\n";
 
             // Paramos de contar o tempo aqui
             $time_end = microtime(true);
@@ -52,7 +52,7 @@
             fclose($arquivo);
             exit;
 
-            
+
             // Melhorar este arquivo com a opção de enviar um email de log para o admin
             // Melhoar este arquivo com a opção de gravar na base de dados se necessario
             // Estas opções tem que ser passadas no argumento como true ou false e entao este escript tem que
