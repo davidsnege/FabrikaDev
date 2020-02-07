@@ -52,6 +52,12 @@
             fclose($arquivo);
             exit;
 
+            
+            // Melhorar este arquivo com a opção de enviar um email de log para o admin
+            // Melhoar este arquivo com a opção de gravar na base de dados se necessario
+            // Estas opções tem que ser passadas no argumento como true ou false e entao este escript tem que
+            // decidir o que fazer com o log (gravar TXT), (gravar TXT, enviar Email), (gravar TXT, enviar Email, gravar no BD)
+
             }
     //╚══════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 ?>
