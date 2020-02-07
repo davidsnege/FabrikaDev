@@ -26,7 +26,7 @@
         }
 
         // Teste de passar mensagem para a funcao de gravar no generador
-        enviaLog("testando passar mensagem pra funcao");
+        // enviaLog("testando passar mensagem pra funcao");
 
         // Incluir este arquivo com include dentro de seu projeto no inicio
         // Depois chamar a função enviaLog(); quando for necessario
