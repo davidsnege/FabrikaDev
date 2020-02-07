@@ -1,0 +1,42 @@
+LOG: cmITikktQaYxH6JfCtJvVLM0oNkB4C3h9tlnuvoIzXr0eJ1FmupnhYIHdO8MTT4EtofShuhn9FCVZ0zB6AQTKwJQesiJUfe2QQttQBAay9uBUgK6aANvG3VWmcZMnsx7
+Mensagem de Log:    valor 
+Total Time:         1581093240m secs 
+Data de Log:        07-02-2020 
+Hora de Log:        05:34:00pm 
+
+LOG: kz6NZNm4Car8vPHfobUl9jEzvpOkoh63ltvxj9mG3HX7aO48hbXjM73swUNqiywKoGDRJJ58vwNlE1kDhwRabHEaJnZxiSkcas7RM65PdYebNYY330Nfy4xtYiyYJqEn
+Mensagem de Log:    Segundo Log 
+Total Time:         1581093280m secs 
+Data de Log:        07-02-2020 
+Hora de Log:        05:34:40pm 
+
+LOG: vnCSVbmOTrL43bq4OxFA06U5SCCj6FySIgU7joFMxilYkLAINY4V0Oj8eOhZgNhSUVGdeArMCWXAlpmZQz446FUXAFf6BPojWKLnbDu374Qnrf79chkw9Cl5lSoj8DU0
+Mensagem de Log:    Segundo Log 
+Total Time:         1581093286m secs 
+Data de Log:        07-02-2020 
+Hora de Log:        05:34:46pm 
+
+LOG: x2fSclCIYxz1IxMdXuCjHCZlPPfEZIthXON2RwgHkgk4EF7RwfH7xveZ22cxbRFAb8f4brU5qOuddHcUWSKAS2CfBIWfPTmWAMfF7kmVACDu46RL8pjLuEgD4veuKyG4
+Mensagem de Log:    Segundo Log 
+Total Time:         1581093288m secs 
+Data de Log:        07-02-2020 
+Hora de Log:        05:34:48pm 
+
+LOG: jMtDzMqH3Z3T8cdPCSvsO0a8FJeakN9RgvqaBHMDbOzd3tIx9fkVPr58dusVhyJU92wvDE0bDy0bAOuXEUOnPKTJpbPPHx17BgnPl9kbUcgtMLmWJowaRNkhAjnQuULd
+Mensagem de Log:    Segundo Log 
+Total Time:         1581093288m secs 
+Data de Log:        07-02-2020 
+Hora de Log:        05:34:48pm 
+
+LOG: iYIQIkgoR78zQPJ0OAjpELpjYuiFg7vSSd7SYMnUuEzVtCALoKTTmf6tVuWsXXMwod2vNyU6JD3iOHu4xNKc2gKNUOu7QVkn0crIEwKNwlr7ngCtipK5xJm7AOT3YaQQ
+Mensagem de Log:    Segundo Log 
+Total Time:         1581093289m secs 
+Data de Log:        07-02-2020 
+Hora de Log:        05:34:49pm 
+
+LOG: zkkiFoZTB72UXyATqvFLyftwcjsUvrgWoJ0M9dmz3ixeIlVH949O9m2kFU4q9RdlwJh13wloZBfCnox6P8EM4HsOK2v0BvG5hDLpQ1sJL23wuAUurbaIyMrcRWNEWjmM
+Mensagem de Log:    testando passar mensagem pra funcao 
+Total Time:         1581093474m secs 
+Data de Log:        07-02-2020 
+Hora de Log:        05:37:54pm 
+
