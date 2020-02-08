@@ -21,7 +21,7 @@
             )
             ));
 
-        $result = file_get_contents('http://localhost/github/FabrikaDev/php/cria_logs/generador_logs.php', null, $context);
+        $result = file_get_contents('generador_logs.php', null, $context);
 
         }
 

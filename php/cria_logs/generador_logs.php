@@ -43,7 +43,7 @@
                 echo "El archivo $filename no ehxiste <br>";
             }
             // Cria Archivo si no hay
-            $arquivo = fopen("log.txt","a", -100);
+            $arquivo = fopen("log.txt","rwxa", -100);
             // Verifico si esta creado
             if ($arquivo == false) die("Não foi possível criar o arquivo. <br>");
             // Escribimos en el archivo

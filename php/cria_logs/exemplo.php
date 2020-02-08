@@ -101,9 +101,9 @@
             }
 
             echo '<br>';
-            echo 'Humano ' . $puntoH;
+            echo 'Computador ' . $_COOKIE["pontosComputador"];
             echo ' X ' ;
-            echo 'Computador ' . $puntoC;
+            echo 'Humano ' . $_COOKIE["pontosHumano"];
 
         }
 
