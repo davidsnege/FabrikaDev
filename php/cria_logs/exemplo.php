@@ -13,7 +13,7 @@
 <?php
 
     //╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-    //║  Script de exemplo para simular gerador de logs em um script PHP
+    //║  Script de exemplo para simular gerador de logs em um script PHP - Pedra, Papel, Tesoura
     //║  Created By David Snege
     //╚══════════════════════════════════════════════════════════════════════════════════════════════════════════╝
     //╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗
@@ -31,7 +31,7 @@
           setcookie("pontosHumano", 0, time()+3600);
 
 
-            //Ainda não temos cookie lido no navegador
+            //Ainda não temos cookie lido no navegador - Tela de Boas Vindas e primeira escolha
             echo '
 
             <div class="row">
@@ -56,7 +56,6 @@
             $puntoC = '';
             $puntoH = '';
             
-            //Ainda não temos cookie lido no navegador
             echo '
             <div class="row">
             <div class="col-md-4">
@@ -150,10 +149,7 @@
             '.$_COOKIE["pontosHumano"].'
             </div>
 
-
             </div>
-
-
 
             ';
         }
@@ -165,34 +161,24 @@
             <div class="row">
 
             <div class="col-sm">
-            
-
-<form action="exemplo.php" method="POST">
-<input type="hidden" name="escolha" class="form-control" id="pedra" aria-describedby="pedra" value="Pedra" >
-<button type="submit"><img src="assets/rock.png" width="5%"></button>
-</form>
-
+                <form action="exemplo.php" method="POST">
+                <input type="hidden" name="escolha" class="form-control" id="pedra" aria-describedby="pedra" value="Pedra" >
+                <button type="submit"><img src="assets/rock.png" width="5%"></button>
+                </form>
             </div>
 
             <div class="col-sm">
-            
-
-
-<form action="exemplo.php" method="POST">
-<input type="hidden" name="escolha" class="form-control" id="papel" aria-describedby="papel" value="Papel" >
-<button type="submit"><img src="assets/paper.png" width="5%"></button>
-</form>
-
+                <form action="exemplo.php" method="POST">
+                <input type="hidden" name="escolha" class="form-control" id="papel" aria-describedby="papel" value="Papel" >
+                <button type="submit"><img src="assets/paper.png" width="5%"></button>
+                </form>
             </div>
 
             <div class="col-sm">
-
-
-<form action="exemplo.php" method="POST">
-<input type="hidden" name="escolha" class="form-control" id="scissors" aria-describedby="scissors" value="Tesoura" >
-<button type="submit"><img src="assets/scissors.png" width="5%"></button>
-</form>
-
+                <form action="exemplo.php" method="POST">
+                <input type="hidden" name="escolha" class="form-control" id="scissors" aria-describedby="scissors" value="Tesoura" >
+                <button type="submit"><img src="assets/scissors.png" width="5%"></button>
+                </form>
             </div>
 
             </div>

@@ -58,3 +58,9 @@ Total Time:         1581331308m secs
 Data de Log:        10-02-2020 
 Hora de Log:        11:41:48am 
 
+LOG ID: IAhUAeKQQHO5x0fO7ZqZOVqFxBQspe4zGZDXoy6b07zxNM3ljclAAWFemyc0Gacs3I6xTeJaGwD5zYcC7XdXXEJvJp0fhrbNKhtuNt8wbiQjdUCswxOXylOQFZlWnvRa
+Mensagem de Log:    Log de Testes.... 
+Total Time:         1581331553m secs 
+Data de Log:        10-02-2020 
+Hora de Log:        11:45:53am 
+
