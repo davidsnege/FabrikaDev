@@ -9,6 +9,7 @@
             $content = http_build_query(array(
             'mensagem_log' => $mensagem
             ));
+            
 
             $context = stream_context_create(array(
             'http' => array(
@@ -20,8 +21,10 @@
             'content' => $content,
             )
             ));
-
-        $result = file_get_contents('generador_logs.php', null, $context);
+        
+        // Poner la ruta intera para que funcione, y tenga en cuenta que debe tener permissos de escritura.
+        $result = file_get_contents('http://localhost/github/FabrikaDev/php/cria_logs/generador_logs.php', null, $context);
+        
 
         }
 

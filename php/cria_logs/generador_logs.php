@@ -7,7 +7,6 @@
             // Declaramos variables
             if(isset($_POST['mensagem_log'])){
             
-
             // Time monitor
             $time_start = microtime(true);
 
@@ -43,7 +42,7 @@
                 echo "El archivo $filename no ehxiste <br>";
             }
             // Cria Archivo si no hay
-            $arquivo = fopen("log.txt","rwxa", -100);
+            $arquivo = fopen("$filename",'a+');
             // Verifico si esta creado
             if ($arquivo == false) die("Não foi possível criar o arquivo. <br>");
             // Escribimos en el archivo
