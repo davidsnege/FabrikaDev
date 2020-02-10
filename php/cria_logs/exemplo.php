@@ -89,38 +89,38 @@
         <div class="col-md-4">
         ';
 
-                    function confereGanha(){
-                        $puntoC = $_COOKIE["pontosComputador"];
-                        $puntoH = $_COOKIE["pontosHumano"];
-                        // Si chegamos a 5 pontos de algum dos lados entao voltamos a zero e começamos de novo
-                        if(isset($_COOKIE["pontosComputador"])){
-                            if($_COOKIE["pontosComputador"] >= 5 || $_COOKIE["pontosHumano"] >= 5){
-                                
-                                if($_COOKIE["pontosComputador"] > $_COOKIE["pontosHumano"]){
-                                    echo "Computador Ganhou";
-                                    setcookie("pontosComputador", 0, time()+3600);
-                                    setcookie("pontosHumano", 0, time()+3600);
-                                    ++$puntoC;
-                                    ++$puntoH;
+            function confereGanha(){
+                $puntoC = $_COOKIE["pontosComputador"];
+                $puntoH = $_COOKIE["pontosHumano"];
+                // Si chegamos a 5 pontos de algum dos lados entao voltamos a zero e começamos de novo
+                if(isset($_COOKIE["pontosComputador"])){
+                    if($_COOKIE["pontosComputador"] >= 5 || $_COOKIE["pontosHumano"] >= 5){
+                        
+                        if($_COOKIE["pontosComputador"] > $_COOKIE["pontosHumano"]){
+                            echo "Computador Ganhou";
+                            setcookie("pontosComputador", 0, time()+3600);
+                            setcookie("pontosHumano", 0, time()+3600);
+                            ++$puntoC;
+                            ++$puntoH;
 
-                                }elseif($_COOKIE["pontosComputador"] < $_COOKIE["pontosHumano"]){
-                                    echo "Humano Ganhou";
-                                    setcookie("pontosComputador", 0, time()+3600);
-                                    setcookie("pontosHumano", 0, time()+3600);
-                                    ++$puntoC;
-                                    ++$puntoH;
+                        }elseif($_COOKIE["pontosComputador"] < $_COOKIE["pontosHumano"]){
+                            echo "Humano Ganhou";
+                            setcookie("pontosComputador", 0, time()+3600);
+                            setcookie("pontosHumano", 0, time()+3600);
+                            ++$puntoC;
+                            ++$puntoH;
 
-                                }else{
-                                    echo "Que bonitinho, Empataram";
-                                    setcookie("pontosComputador", 0, time()+3600);
-                                    setcookie("pontosHumano", 0, time()+3600);
-                                    ++$puntoC;
-                                    ++$puntoH;
+                        }else{
+                            echo "Que bonitinho, Empataram";
+                            setcookie("pontosComputador", 0, time()+3600);
+                            setcookie("pontosHumano", 0, time()+3600);
+                            ++$puntoC;
+                            ++$puntoH;
 
-                                }
-                            }
                         }
                     }
+                }
+            }
 
             //
             if ($computador[$randIndex1] === $humano){
@@ -181,6 +181,7 @@
                 setcookie("pontosHumano", $puntoH, time()+3600);
                 enviaLog("Pedra x Papel : ".$_COOKIE["pontosComputador"]." Computador:  x Humano: ".$_COOKIE["pontosHumano"]." ");
             }
+            
             echo '
             </div>
 
