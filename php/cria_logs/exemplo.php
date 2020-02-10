@@ -26,8 +26,8 @@
         $tesoura ='Tesoura';
 
         
-        $puntoC =0;
-        $puntoH =0;
+        $puntoC =1;
+        $puntoH =1;
 
         if(!isset($_COOKIE["pontosHumano"]) || !isset($_COOKIE["pontosComputador"]))
         {
@@ -71,16 +71,15 @@
                         $humano = $humano[$randIndex2];
                     }
 
-                    // porque temos isso
-                    $puntoC = $_COOKIE["pontosComputador"];
-                    $puntoH = $_COOKIE["pontosHumano"];
 
            
             echo '
             <div class="row">
             <div class="col-md-4">
 
-                <h5>C</h5>
+                <h5>Máquina VS Humano</h5>
+
+                <br>
 
             </div>
             ';
@@ -94,10 +93,19 @@
                 $puntoH = $_COOKIE["pontosHumano"];
                 // Si chegamos a 5 pontos de algum dos lados entao voltamos a zero e começamos de novo
                 if(isset($_COOKIE["pontosComputador"])){
-                    if($_COOKIE["pontosComputador"] >= 5 || $_COOKIE["pontosHumano"] >= 5){
+                    if($_COOKIE["pontosComputador"] >= 3 || $_COOKIE["pontosHumano"] >= 3){
                         
                         if($_COOKIE["pontosComputador"] > $_COOKIE["pontosHumano"]){
                             echo "Computador Ganhou";
+
+                            echo "<br>";
+                            echo '
+                                <form action="exemplo.php" method="POST">
+                                <input type="hidden" name="escolha" class="form-control" id="papel" aria-describedby="papel" value="" >
+                                <input type="image" src="assets/start.png" style="width: 50px;" name="submit">
+                                </form>
+                                ';
+
                             setcookie("pontosComputador", 0, time()+3600);
                             setcookie("pontosHumano", 0, time()+3600);
                             ++$puntoC;
@@ -105,6 +113,15 @@
 
                         }elseif($_COOKIE["pontosComputador"] < $_COOKIE["pontosHumano"]){
                             echo "Humano Ganhou";
+
+                            echo "<br>";
+                            echo '
+                                <form action="exemplo.php" method="POST">
+                                <input type="hidden" name="escolha" class="form-control" id="papel" aria-describedby="papel" value="" >
+                                <input type="image" src="assets/start.png" style="width: 50px;" name="submit">
+                                </form>
+                                ';
+
                             setcookie("pontosComputador", 0, time()+3600);
                             setcookie("pontosHumano", 0, time()+3600);
                             ++$puntoC;
@@ -112,6 +129,15 @@
 
                         }else{
                             echo "Que bonitinho, Empataram";
+
+                            echo "<br>";
+                            echo '
+                                <form action="exemplo.php" method="POST">
+                                <input type="hidden" name="escolha" class="form-control" id="papel" aria-describedby="papel" value="" >
+                                <input type="image" src="assets/start.png" style="width: 50px;" name="submit">
+                                </form>
+                                ';
+                            
                             setcookie("pontosComputador", 0, time()+3600);
                             setcookie("pontosHumano", 0, time()+3600);
                             ++$puntoC;
@@ -131,7 +157,7 @@
                 $puntoH = $_COOKIE["pontosHumano"];
                 ++$puntoH;
                 setcookie("pontosHumano", $puntoH, time()+3600);
-                enviaLog("".$computador[$randIndex1]." x ".$humano." : ".$_COOKIE["pontosComputador"]." Computador:  x Humano: ".$_COOKIE["pontosHumano"]." ");
+                // enviaLog("".$computador[$randIndex1]." x ".$humano." : ".$_COOKIE["pontosComputador"]." Computador:  x Humano: ".$_COOKIE["pontosHumano"]." ");
             }
             elseif (($computador[$randIndex1] === 'Pedra') and ($humano === 'Tesoura')){
                 echo 'Pedra x Tesoura';
@@ -139,7 +165,7 @@
                 $puntoC = $_COOKIE["pontosComputador"];
                 ++$puntoC;
                 setcookie("pontosComputador", $puntoC, time()+3600);
-                enviaLog("Pedra x Tesoura : ".$_COOKIE["pontosComputador"]." Computador:  x Humano: ".$_COOKIE["pontosHumano"]." ");
+                // enviaLog("Pedra x Tesoura : ".$_COOKIE["pontosComputador"]." Computador:  x Humano: ".$_COOKIE["pontosHumano"]." ");
             }
             elseif (($computador[$randIndex1] === 'Tesoura') and ($humano === 'Papel')){
                 echo 'Tesoura x Papel';
@@ -147,7 +173,7 @@
                 $puntoC = $_COOKIE["pontosComputador"];
                 ++$puntoC;
                 setcookie("pontosComputador", $puntoC, time()+3600);
-                enviaLog("Tesoura x Papel : ".$_COOKIE["pontosComputador"]." Computador:  x Humano: ".$_COOKIE["pontosHumano"]." ");
+                // enviaLog("Tesoura x Papel : ".$_COOKIE["pontosComputador"]." Computador:  x Humano: ".$_COOKIE["pontosHumano"]." ");
             }
             elseif (($computador[$randIndex1] === 'Papel') and ($humano === 'Pedra')){
                 echo 'Papel x Pedra';
@@ -155,7 +181,7 @@
                 $puntoC = $_COOKIE["pontosComputador"];
                 ++$puntoC;
                 setcookie("pontosComputador", $puntoC, time()+3600);
-                enviaLog("Papel x Pedra : ".$_COOKIE["pontosComputador"]." Computador:  x Humano: ".$_COOKIE["pontosHumano"]." ");
+                // enviaLog("Papel x Pedra : ".$_COOKIE["pontosComputador"]." Computador:  x Humano: ".$_COOKIE["pontosHumano"]." ");
             }
             elseif (($humano === 'Pedra') and ($computador[$randIndex1] === 'Tesoura')){
                 echo 'Tesoura x Pedra';
@@ -163,7 +189,7 @@
                 $puntoH = $_COOKIE["pontosHumano"];
                 ++$puntoH;
                 setcookie("pontosHumano", $puntoH, time()+3600);
-                enviaLog("Tesoura x Pedra : ".$_COOKIE["pontosComputador"]." Computador:  x Humano: ".$_COOKIE["pontosHumano"]." ");
+                // enviaLog("Tesoura x Pedra : ".$_COOKIE["pontosComputador"]." Computador:  x Humano: ".$_COOKIE["pontosHumano"]." ");
             }
             elseif (($humano === 'Tesoura') and ($computador[$randIndex1] === 'Papel')){
                 echo 'Papel x Tesoura';
@@ -171,7 +197,7 @@
                 $puntoH = $_COOKIE["pontosHumano"];
                 ++$puntoH;
                 setcookie("pontosHumano", $puntoH, time()+3600);
-                enviaLog("Papel x Tesoura : ".$_COOKIE["pontosComputador"]." Computador:  x Humano: ".$_COOKIE["pontosHumano"]." ");
+                // enviaLog("Papel x Tesoura : ".$_COOKIE["pontosComputador"]." Computador:  x Humano: ".$_COOKIE["pontosHumano"]." ");
             }
             elseif (($humano === 'Papel') and ($computador[$randIndex1] === 'Pedra')){
                 echo 'Pedra x Papel';
@@ -179,14 +205,43 @@
                 $puntoH = $_COOKIE["pontosHumano"];
                 ++$puntoH;
                 setcookie("pontosHumano", $puntoH, time()+3600);
-                enviaLog("Pedra x Papel : ".$_COOKIE["pontosComputador"]." Computador:  x Humano: ".$_COOKIE["pontosHumano"]." ");
+                // enviaLog("Pedra x Papel : ".$_COOKIE["pontosComputador"]." Computador:  x Humano: ".$_COOKIE["pontosHumano"]." ");
             }
-            
+
             echo '
+
+            <br>
+            <div class="row"><br>
+
+            <div class="col-sm">
+                <form action="exemplo.php" method="POST">
+                <input type="hidden" name="escolha" class="form-control" id="pedra" aria-describedby="pedra" value="Pedra" >
+                <input type="image" src="assets/rock.png" style="width: 50px;" name="submit">
+                </form>
+            </div>
+
+            <div class="col-sm">
+                <form action="exemplo.php" method="POST">
+                <input type="hidden" name="escolha" class="form-control" id="papel" aria-describedby="papel" value="Papel" >
+                <input type="image" src="assets/paper.png" style="width: 50px;" name="submit">
+                </form>
+            </div>
+
+            <div class="col-sm">
+                <form action="exemplo.php" method="POST">
+                <input type="hidden" name="escolha" class="form-control" id="scissors" aria-describedby="scissors" value="Tesoura" >
+                <input type="image" src="assets/scissors.png" style="width: 50px;" name="submit">
+                </form>
+            </div>
+
+            </div>
+
+
+
+
             </div>
 
             <div class="col-md-4">
-            <h5>H</h5>
             </div>
 
             </div>
@@ -200,30 +255,7 @@
 ?>
 
 
-            <div class="row">
-
-            <div class="col-sm">
-                <form action="exemplo.php" method="POST">
-                <input type="hidden" name="escolha" class="form-control" id="pedra" aria-describedby="pedra" value="Pedra" >
-                <button type="submit"><img src="assets/rock.png" width="5%"></button>
-                </form>
-            </div>
-
-            <div class="col-sm">
-                <form action="exemplo.php" method="POST">
-                <input type="hidden" name="escolha" class="form-control" id="papel" aria-describedby="papel" value="Papel" >
-                <button type="submit"><img src="assets/paper.png" width="5%"></button>
-                </form>
-            </div>
-
-            <div class="col-sm">
-                <form action="exemplo.php" method="POST">
-                <input type="hidden" name="escolha" class="form-control" id="scissors" aria-describedby="scissors" value="Tesoura" >
-                <button type="submit"><img src="assets/scissors.png" width="5%"></button>
-                </form>
-            </div>
-
-            </div>
+ 
 
 
 
@@ -231,7 +263,11 @@
             <div class="row">
 
                 <div class="col-sm">
-                    <?php echo $_COOKIE["pontosComputador"]; ?>
+                    <?php 
+                    if(isset($_COOKIE["pontosHumano"])){
+                    // echo $_COOKIE["pontosComputador"]; 
+                    }
+                    ?>
                 </div>
 
                     <div class="col-sm">
@@ -239,7 +275,11 @@
                     </div>
 
                 <div class="col-sm">
-                    <?php echo $_COOKIE["pontosHumano"]; ?>
+                    <?php 
+                    if(isset($_COOKIE["pontosHumano"])){
+                    // echo $_COOKIE["pontosHumano"]; 
+                    }
+                    ?>
                 </div>
                 
             </div>            
@@ -251,8 +291,12 @@
                     
                 </div>
 
-                    <div class="col-sm">
-                        <?php confereGanha(); ?>
+                    <div class="col-sm"><br>
+                        <?php 
+                        if(isset($_COOKIE["pontosHumano"])){
+                        confereGanha(); 
+                        }
+                        ?>
                     </div>
 
                 <div class="col-sm">
