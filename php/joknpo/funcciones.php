@@ -65,6 +65,8 @@ function rodaRoda($arg){
         ++$hum_p;
         setcookie("hum_p", $hum_p, time()+3600);
     }
+
+
     else if($cpu_choice == 'pe' && $hum_choice == 'te'){
         $winer = 'cpu';
         setcookie("winer", "$winer", time()+3600);
@@ -73,6 +75,8 @@ function rodaRoda($arg){
         ++$cpu_p;
         setcookie("cpu_p", $cpu_p, time()+3600);
     }
+
+
     else if($cpu_choice == 'te' && $hum_choice == 'pa'){
         $winer = 'cpu';
         setcookie("winer", "$winer", time()+3600);
@@ -81,6 +85,8 @@ function rodaRoda($arg){
         ++$cpu_p;
         setcookie("cpu_p", $cpu_p, time()+3600);
     }
+
+
     else if($cpu_choice == 'pa' && $hum_choice == 'pe'){
         $winer = 'cpu';
         setcookie("winer", "$winer", time()+3600);
@@ -89,6 +95,8 @@ function rodaRoda($arg){
         ++$cpu_p;
         setcookie("cpu_p", $cpu_p, time()+3600);
     }
+
+
     else if($hum_choice == 'pe' && $cpu_choice == 'te'){
         $winer = 'hum';
         setcookie("winer", "$winer", time()+3600);
@@ -97,6 +105,8 @@ function rodaRoda($arg){
         ++$hum_p;
         setcookie("hum_p", $hum_p, time()+3600);
     }
+
+
     else if($hum_choice == 'te' && $cpu_choice == 'pa'){
         $winer = 'hum';
         setcookie("winer", "$winer", time()+3600);
@@ -105,6 +115,8 @@ function rodaRoda($arg){
         ++$hum_p;
         setcookie("hum_p", $hum_p, time()+3600);
     }
+
+    
     else if($hum_choice == 'pe' && $cpu_choice == 'pe'){
         $winer = 'hum';
         setcookie("winer", "$winer", time()+3600);
@@ -121,14 +133,14 @@ function rodaRoda($arg){
         setcookie("hum_choice", $hum_choice, time()-3600);
         setcookie("hum_p", $hum_p, time()-3600);
         setcookie("cpu_p", $cpu_p, time()-3600);
-        setcookie("winer", "CPU GANHA", time()+3600);
+        setcookie("winer", "CPU Win!", time()+3600);
     }
     if($hum_p >= 5){
         setcookie("cpu_choice", $cpu_choice, time()-3600);
         setcookie("hum_choice", $hum_choice, time()-3600);
         setcookie("hum_p", $hum_p, time()-3600);
         setcookie("cpu_p", $cpu_p, time()-3600);
-        setcookie("winer", "HUMANO GANHA", time()+3600);
+        setcookie("winer", "Humano Win!", time()+3600);
     }
 
 
