@@ -36,15 +36,15 @@
 
 <form action="funcciones.php" method="POST">
 <input type="hidden" name="choice" class="form-control" id="pe" aria-describedby="pe" value="pe" >
-<input type="image" src="" style="width: 50px;" name="pe" value="pe">
+<input type="image" src="assets/rock.png" style="width: 50px;" name="pe" value="pe">
 </form>
 <form action="funcciones.php" method="POST">
 <input type="hidden" name="choice" class="form-control" id="pa" aria-describedby="pa" value="pa" >
-<input type="image" src="" style="width: 50px;" name="pa" value="pa">
+<input type="image" src="assets/paper.png" style="width: 50px;" name="pa" value="pa">
 </form>
 <form action="funcciones.php" method="POST">
 <input type="hidden" name="choice" class="form-control" id="te" aria-describedby="te" value="te" >
-<input type="image" src="" style="width: 50px;" name="te" value="te">
+<input type="image" src="assets/scissors.png" style="width: 50px;" name="te" value="te">
 </form>
 
 
