@@ -16,4 +16,4 @@ $client = new SoapClient(null, $options);
 // Já estamos conectados, vamos usar o método "somar" do servidor:
 var_dump($client->somar(10, 15)); // 25
 
-
+//test
