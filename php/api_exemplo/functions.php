@@ -136,7 +136,7 @@
 			    WHERE pays.id_pays = '$pais'
 			";
 					$result = mysqli_query($connection, $queryPais);
-				  while ($row = mysqli_fetch_array($result)){
+				  while ($row = mysqli_fetch_object($result)){
 					echo $row = json_encode($row, true);
 				  }
 
@@ -167,7 +167,7 @@
 			    WHERE regions.id_region = '$region'
 			";
 			$result = mysqli_query($connection, $queryRegion);
-			while ($row = mysqli_fetch_array($result)){
+			while ($row = mysqli_fetch_object($result)){
 			echo $row = json_encode($row, true);
 			}
 			$connection->close();
@@ -197,7 +197,7 @@
 			    WHERE departements.id_departement = '$departamento'
 			";
 			$result = mysqli_query($connection, $queryDepartamento);
-			while ($row = mysqli_fetch_array($result)){
+			while ($row = mysqli_fetch_object($result)){
 			echo $row = json_encode($row, true);
 			}
 			$connection->close();
@@ -227,7 +227,7 @@
 			    WHERE communes.id_commune = '$poblacion'
 			";
 			$result = mysqli_query($connection, $queryPoblacion);
-			while ($row = mysqli_fetch_array($result)){
+			while ($row = mysqli_fetch_object($result)){
 			echo $row = json_encode($row, true);
 			}
 			$connection->close();
@@ -257,7 +257,7 @@
 			    WHERE campings.id_camping = '$camping'
 			";
 			$result = mysqli_query($connection, $queryCamping);
-			while ($row = mysqli_fetch_array($result)){
+			while ($row = mysqli_fetch_object($result)){
 			echo $row = json_encode($row, true);
 			}
 			$connection->close();
