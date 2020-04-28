@@ -1,0 +1,151 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+<script src="https://code.jquery.com/jquery-3.5.0.js" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<!-- FONTE: https://br.investing.com/webmaster-tools/ -->
+<!-- FONTE DE NOTICIAS RSS: https://br.investing.com/webmaster-tools/rss -->
+
+<!-- DADOS E INDICES -->
+
+<!-- <iframe src="https://br.widgets.investing.com/top-cryptocurrencies?theme=darkTheme&roundedCorners=true" width="100%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">Desenvolvido por <a href="https://br.investing.com?utm_source=WMT&amp;utm_medium=referral&amp;utm_campaign=TOP_CRYPTOCURRENCIES&amp;utm_content=Footer%20Link" target="_blank" rel="nofollow">Investing.com</a></div> -->
+
+<!-- <iframe src="https://br.widgets.investing.com/ico-calendar?theme=darkTheme&roundedCorners=true" width="100%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">Desenvolvido por <a href="https://br.investing.com?utm_source=WMT&amp;utm_medium=referral&amp;utm_campaign=ICO_CALENDAR&amp;utm_content=Footer%20Link" target="_blank" rel="nofollow">Investing.com</a></div> -->
+
+<!-- <iframe src="https://sslecal2.forexprostools.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&features=datepicker,timezone&countries=110,17,29,25,32,6,37,36,26,5,22,39,14,48,10,35,7,43,38,4,12,72&calType=week&timeZone=12&lang=12" width="100%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;"><span style="font-size: 11px;color: #333333;text-decoration: none;">Calendário Econômico fornecido por <a href="https://br.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com Brasil</a>, o portal líder financeiro.</span></div> -->
+
+<!-- <iframe src="https://ssltsw.forexprostools.com?lang=12&forex=2103,1617,1513,1,3,9,10&commodities=8833,8849,8830,8836,8832,8918,8911&indices=23660,166,172,27,179,170,174&stocks=358,474,446,334,345,346,347&tabs=1,2,3,4" width="317" height="467"></iframe><div class="poweredBy" style="font-family:arial,helvetica,sans-serif; direction:ltr;"><span style="font-size: 11px;color: #333333;text-decoration: none;">Resumo Técnico fornecido por <a href="https://br.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com Brasil</a>.</span></div> -->
+
+<!-- <iframe src="https://br.widgets.investing.com/live-currency-cross-rates?theme=darkTheme&roundedCorners=true&pairs=1,3,2,4,7,5,8,6,9,10,49,11" width="100%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">Desenvolvido por <a href="https://br.investing.com?utm_source=WMT&amp;utm_medium=referral&amp;utm_campaign=LIVE_CURRENCY_X_RATES&amp;utm_content=Footer%20Link" target="_blank" rel="nofollow">Investing.com</a></div> -->
+
+<!-- <iframe src="https://br.widgets.investing.com/crypto-currency-rates?theme=darkTheme&roundedCorners=true&pairs=945629,997650,1001803,1010773,940810,1010779,1010776,1010777,1010798,1010782,1010801,1031068" width="100%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">Desenvolvido por <a href="https://br.investing.com?utm_source=WMT&amp;utm_medium=referral&amp;utm_campaign=CRYPTO_CURRENCY_RATES&amp;utm_content=Footer%20Link" target="_blank" rel="nofollow">Investing.com</a></div> -->
+
+<!-- <iframe src="https://br.widgets.investing.com/single-currency-crosses?theme=darkTheme&roundedCorners=true&currency=12" width="100%" height="100%" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;">Desenvolvido por <a href="https://br.investing.com?utm_source=WMT&amp;utm_medium=referral&amp;utm_campaign=SINGLE_CROSSES&amp;utm_content=Footer%20Link" target="_blank" rel="nofollow">Investing.com</a></div> -->
+
+<!-- CONVERSORES E CALCULADORAS -->
+
+<!-- <iframe height="100%" width="100%" src="https://ssltools.forexprostools.com/currency-converter/index.php?from=17&to=12&force_lang=12"></iframe><br /><table width="197"><tr><td><span style="font-size: 11px;color: #333333;text-decoration: none;">Conversor de Moedas fornecido por <a href="https://br.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com Brasil</a>.</span></td></tr></table> -->
+
+<!-- <iframe frameborder="0" scrolling="auto" height="640" width="545" allowtransparency="true" marginwidth="0" marginheight="0" src="https://ssltools.forexprostools.com/pip-calculator/index.php?force_lang=12&acc=12"></iframe><br /><div style="width:450"><span style="float:left"><span style="font-size: 11px;color: #333333;text-decoration: none;">Calculadora Pip fornecida por <a href="https://br.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com Brasil</a>.</span></span></div> -->
+
+<!-- <iframe frameborder="0" scrolling="no" height="450" width="420" allowtransparency="true" marginwidth="0" marginheight="0" src="https://ssltools.forexprostools.com/profit-calculator/index.php?force_lang=12&acc=12&pair=1"></iframe><br /><div style="width:450"><span style="float:left"><span style="font-size: 11px;color: #333333;text-decoration: none;">Calculadora de Lucro fornecida por <a href="https://br.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com Brasil</a>.</span></span></div> -->
+
+<!-- <iframe frameborder="0" scrolling="auto" height="600" width="543" allowtransparency="true" marginwidth="0" marginheight="0" src="https://ssltools.forexprostools.com/pivot-calculator/index.php?force_lang=12"></iframe><br /><div style="width:450"><span style="float:left"><span style="font-size: 11px;color: #333333;text-decoration: none;">Calculadora de Pontos de Pivô fornecida por <a href="https://br.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com Brasil</a>.</span></span></div> -->
+
+<!-- <iframe frameborder="0" scrolling="auto" height="650" width="545" allowtransparency="true" marginwidth="0" marginheight="0" src="https://ssltools.forexprostools.com/fibonacci-calculator/index.php?force_lang=12"></iframe><br /><div style="width:450"><span style="float:left"><span style="font-size: 11px;color: #333333;text-decoration: none;">Calculadora Fibonacci fornecida por <a href="https://br.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com Brasil</a>.</span></span></div> -->
+
+<!-- <iframe frameborder="0" scrolling="no" height="425" width="430" allowtransparency="true" marginwidth="0" marginheight="0" src="https://ssltools.forexprostools.com/margin-calculator/index.php?force_lang=12&acc=12&pair=1"></iframe><br /><div style="width:450"><a href="http://br.investing.com" target="_blank"><img src="https://wmt-invdn-com.akamaized.net/forexpros_pt_logo.png" alt="Investing.com" title="Investing.com" style="float:left" /></a><span style="float:right"><span style="font-size: 11px;color: #333333;text-decoration: none;">Calculadora de Margem fornecida por <a href="https://br.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com Brasil</a>.</span></span></div> -->
+
+<!-- <iframe frameborder="0" scrolling="no" height="274" width="425" allowtransparency="true" marginwidth="0" marginheight="0" src="https://ssltools.forexprostools.com/technical_summary.php?pairs=&curr-name-color=%230059B0&fields=5m,1h,1d&force_lang=12"></iframe><br /><div style="width:425px;"><span style="float:left"><span style="font-size: 11px;color: #333333;text-decoration: none;">Análises Técnicas fornecidas por <a href="https://br.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com Brasil</a>.</span></span></div> -->
+
+<!-- <iframe frameborder="0" scrolling="no" height=82 width="231" allowtransparency="true" marginwidth="0" marginheight="0" src="https://sslirates.forexprostools.com/index.php?rows=2&bg1=FFFFFF&bg2=F1F5F8&text_color=333333&enable_border=show&border_color=0452A1&header_bg=0452A1&header_text=FFFFFF&force_lang=12" align="center"></iframe><br /><table width="200"><tbody><tr><td style="text-align:left"><a href="//www.investing.com" rel="nofollow" target="_blank"><img style="vertical-align:middle;" title="Investing.com" alt="Investing.com" border="0" src="https://92f8049275b46d631f32-c598b43a8fdedd4f0b9230706bd7ad18.ssl.cf1.rackcdn.com/forexpros_en_logo.png"></a></td></tr><tr><td><span style="font-size: 11px;color: #333333;text-decoration: none;">Taxas de Juros fornecidas por <a href="https://br.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com Brasil</a>.</span></td></tr></tbody></table> -->
+
+<!-- <iframe frameborder="0" scrolling="auto" height="195" width="555" allowtransparency="true" marginwidth="0" marginheight="0" src="https://sslfxrates.forexprostools.com/index_exchange.php?params&inner-border-color=%23CBCBCB&border-color=%23cbcbcb&bg1=%23F6F6F6&bg2=%23ffffff&inner-text-color=%23000000&currency-name-color=%23000000&header-text-color=%23FFFFFF&force_lang=12" align="center"></iframe><br /><div style="width:540px"><a href="http://br.investing.com" target="_blank"><img src="https://wmt-invdn-com.akamaized.net/forexpros_pt_logo.png" alt="Investing.com" title="Investing.com" style="float:left" /></a><span style="float:right"><span style="font-size: 11px;color: #333333;text-decoration: none;">Taxas de Câmbio fornecidas por <a href="https://br.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com Brasil</a>.</span></span></div> -->
+
+<!-- GRAFICOS TECNICOS  -->
+<!-- <iframe height="450" width="680" src="https://ssltvc.forexprostools.com/?pair_ID=2103&height=480&width=800&interval=300&plotStyle=area&domain_ID=30&lang_ID=12&timezone_ID=10"></iframe> -->
+
+<!-- GRAFICOS DE MOEDAS -->
+<!-- <iframe height="355" width="430" src="https://sslcharts.forexprostools.com/index.php?force_lang=12&pair_ID=1&timescale=300&candles=50&style=candles"></iframe><br /><div style="width:500px"><a target="_blank" href="https://br.investing.com"><img src="https://wmt-invdn-com.akamaized.net/forexpros_pt_logo.png" alt="Investing.com" title="Investing.com" style="float:left" border="0"/></a><span style="float:right"><span style="font-size: 11px;color: #333333;text-decoration: none;">Gráficos de Moedas fornecidos por <a href="https://br.investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com Brasil</a>.</span></span></div> -->
+
+
+
+<!-- EVOLUTION -->
+<?php 
+// for ($i=0; $i < 0; $i++) { 
+//     // pair_ID=2103
+//     // plotStyle=candle / area / bars
+//     echo '<iframe height="480" width="900" src="https://ssltvc.forexprostools.com/?pair_ID='
+//         .$i.
+//     '&height=480&width=900&interval=300&plotStyle=candle&domain_ID=30&lang_ID=12&timezone_ID=12"></iframe>';
+// }
+?>
+
+<!-- ESTRAIDOS COM POSTMAN -->
+<!-- <iframe src="https://tvc-invdn-com.akamaized.net/tool/1.12.8/tool-prod-2-ssl.html?carrier=2f40b3928d73a6c685ae5778af8e3dea&time=1587722238&domain_ID=30&lang_ID=12&timezone_ID=10&version=1.12.8&locale=en&timezone=America/Sao_Paulo&pair_ID=1&interval=5&session=24x7&prefix=br&suffix=&client=0&user=&plotStyle=area&geoc=ES&styleOverride="frameborder="0" scrolling="no" seamless="seamless" style="width: 800px; height:458px;" class=""></iframe> -->
+
+
+<label for="cars">Quantidade de Gráficos</label>
+
+<select id="telas">
+  <option value="1" name="1">1</option>
+  <option value="2" name="2">2</option>
+  <option value="3" name="3">3</option>
+  <option value="4" name="4">4</option>
+</select>
+
+<label for="cars">Tipo de Grafico</label>
+
+<select id="tipo">
+  <option value="area" name="area">Area</option>
+  <option value="bars" name="bars">Bars</option>
+  <option value="candle" name="candle">Candles</option>
+</select>
+
+
+
+<!-- <div id="htmls" style="visibility: hidden;"></div> -->
+<div id="htmls"></div>
+
+<script>
+var htmlDocu = 0;
+var qtdGraficos = 0;
+var tipGraficos = 'candle';
+
+// Atualizamos os graficos de acordo com o que selecionamos nos selects ************************************************************************
+        function atualizar(params) {
+
+            // Quantidade de Telas
+            var qtdGraficos = $("#telas").val();
+            // Tipo de Gráfico
+            var tipGraficos = $("#tipo").val();
+
+                // Printamos HTML
+                for(j=0; j < qtdGraficos; ){  
+
+                        // Limpamos variavel de html para nao somar indefinidamente
+                        var htmlDocu;
+                        if(htmlDocu == undefined){
+                            htmlDocu = '';
+                        }
+
+                        // Este é o HTML que queremos printar com os parametros
+                        htmlDocu += '<iframe height="450" width="870" src="https://ssltvc.forexprostools.com/?pair_ID='+j+'&height=450&width=870&interval=300&plotStyle='+tipGraficos+'&domain_ID=30&lang_ID=12&timezone_ID=12"></iframe>'; 
+                            
+                            // Este é o print do HTML
+                            $("#htmls").html(htmlDocu);
+                            
+                    // Somamos mais um a J para incrementar quantas vezes queremos printar o iframe        
+                    j++;
+                }
+        }
+// ********************************************************************************************************************************************
+
+
+
+            // Printamos a primeira tela default aqui
+            if(qtdGraficos == 0){
+                htmlDocu += '<iframe height="450" width="870" src="https://ssltvc.forexprostools.com/?pair_ID=01&height=450&width=870&interval=300&plotStyle=area&domain_ID=30&lang_ID=12&timezone_ID=12"></iframe>';  
+                $("#htmls").html(htmlDocu);
+            }
+
+
+        // Define quantas telas de graficos carregar por vez
+        $( "#telas" ).change(function() {
+
+            atualizar();
+
+        });
+        $( "#tipo" ).change(function() {
+
+            atualizar();
+
+        });
+
+
+
+</script>
+

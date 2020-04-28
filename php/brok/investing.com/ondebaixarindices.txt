@@ -1,0 +1,8 @@
+https://br.investing.com/indices/major-indices
+
+https://br.investing.com/webmaster-tools/
+
+<!-- FONTE: https://br.investing.com/webmaster-tools/ -->
+<!-- FONTE DE NOTICIAS RSS: https://br.investing.com/webmaster-tools/rss -->
+
+https://br.tradingview.com/symbols/BMFBOVESPA-IBOV/
