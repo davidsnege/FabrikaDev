@@ -78,7 +78,7 @@
 <div id="htmls"></div>
 
 <script>
-var htmlDocu = 0;
+var htmlDocu = '';
 var qtdGraficos = 0;
 var tipGraficos = 'candle';
 
@@ -100,7 +100,7 @@ var tipGraficos = 'candle';
                         }
 
                         // Este é o HTML que queremos printar com os parametros
-                        htmlDocu += '<iframe height="450" width="870" src="https://ssltvc.forexprostools.com/?pair_ID='+j+'&height=450&width=870&interval=300&plotStyle='+tipGraficos+'&domain_ID=30&lang_ID=12&timezone_ID=12"></iframe>'; 
+                        htmlDocu += '<iframe height="480" width="670" src="https://ssltvc.forexprostools.com/?pair_ID='+j+'&height=480&width=670&interval=300&plotStyle='+tipGraficos+'&domain_ID=30&lang_ID=12&timezone_ID=12"></iframe>'; 
                             
                             // Este é o print do HTML
                             $("#htmls").html(htmlDocu);
@@ -115,7 +115,7 @@ var tipGraficos = 'candle';
 
             // Printamos a primeira tela default aqui
             if(qtdGraficos == 0){
-                htmlDocu += '<iframe height="450" width="870" src="https://ssltvc.forexprostools.com/?pair_ID=01&height=450&width=870&interval=300&plotStyle=area&domain_ID=30&lang_ID=12&timezone_ID=12"></iframe>';  
+                htmlDocu += '<iframe height="480" width="670" src="https://ssltvc.forexprostools.com/?pair_ID=01&height=480&width=670&interval=300&plotStyle=area&domain_ID=30&lang_ID=12&timezone_ID=12"></iframe>';  
                 $("#htmls").html(htmlDocu);
             }
 
