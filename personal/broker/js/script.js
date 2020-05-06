@@ -95,6 +95,25 @@ $(document).ready(function($) {
         }
         });
     });
+//** iQOption */
+    $("#iqoption").click(function(){
+        $.ajax({
+        // *********************
+        type:'post',   
+        async: false,
+        data: {cases:'iqoption', opcao:'opcao passada: link '},
+        url: 'app/case.php',
+        // *********************
+        success:function(data){
+            $("#bodyGeneral").html(data);
+        },
+        // *********************
+        error:function(data){
+            console.log('Error');
+            $("#bodyGeneral").html(data);
+        }
+        });
+    });
 //** ADMIN USER */
     $("#admuser").click(function(){
         $.ajax({

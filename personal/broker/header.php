@@ -20,6 +20,9 @@
         <a id="indicadores" class="nav-link" href="#">Indicadores</a>
       </li>
       <li class="nav-item">
+        <a id="iqoption" class="nav-link" href="#">IQoption</a>
+      </li>
+      <li class="nav-item">
         <a id="admuser" class="nav-link" href="#">Admin User</a>
       </li>
 

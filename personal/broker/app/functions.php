@@ -23,4 +23,12 @@
         include '../views/indicadores.html';
 
 		return $param;
+    }
+    
+    function imprimeiqoption($param){
+        // echo ' - Estou na funcao impimecartera: '.$param;
+        
+        include '../views/iqoption.html';
+
+		return $param;
 	}
