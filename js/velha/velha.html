@@ -1,0 +1,98 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <!-- <link rel="stylesheet" type="text/css" href="estilo.css" /> -->
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <!-- <script type="text/javascript" src="script.js"></script> -->
+    </head>
+
+    <body>
+        <div id="jogo">
+            <div class="linha">
+                <div class="casa" id="casa1"></div>
+                <div class="casa" id="casa2"></div>
+                <div class="casa" id="casa3"></div>
+            </div>
+            <div class="linha">
+                <div class="casa" id="casa4"></div>
+                <div class="casa" id="casa5"></div>
+                <div class="casa" id="casa6"></div>
+            </div>
+            <div class="linha">
+                <div class="casa" id="casa7"></div>
+                <div class="casa" id="casa8"></div>
+                <div class="casa" id="casa9"></div>
+            </div>
+        </div>
+        <div id="resultado"></div>
+    </body>
+
+    </html>
+
+<style>
+#jogo{
+    width:603px;
+    height:600px;
+    border:solid 3px
+}
+ 
+.linha{
+    height:200px;
+    border-bottom:solid 1px;
+}
+ 
+.casa{
+    width:200px;
+    height:100%;
+    border-right:solid 1px;
+    float:left;
+}
+</style>
+<script>
+    $(function () {
+            //O conteúdo deve ficar aqui
+            var vez = 1;
+        var vencedor = "";
+        function casasIguais(a, b, c) {
+            var casaA = $("#casa" + a);
+            var casaB = $("#casa" + b);
+            var casaC = $("#casa" + c);
+            var bgA = $("#casa" + a).css("background-image");
+            var bgB = $("#casa" + b).css("background-image");
+            var bgC = $("#casa" + c).css("background-image");
+            if ((bgA == bgB) && (bgB == bgC) && (bgA != "none" && bgA != "")) {
+                if (bgA.indexOf("1.png") >= 0)
+                    vencedor = "1";
+                else
+                    vencedor = "2";
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        function verificarFimDeJogo() {
+            if (casasIguais(1, 2, 3) || casasIguais(4, 5, 6) || casasIguais(7, 8, 9) ||
+                casasIguais(1, 4, 7) || casasIguais(2, 5, 8) || casasIguais(3, 6, 9) ||
+                casasIguais(1, 5, 9) || casasIguais(3, 5, 7)
+            ) {
+                $("#resultado").html("<h1>O jogador " + vencedor + "venceu! </h1>");
+                $(".casa").off("click");
+            }
+        }
+        $(".casa").click(function () {
+            var bg = $(this).css("background-image");
+            if (bg == "none" || bg == "") {
+                var fig = "url(" + vez.toString() + ".png)";
+                $(this).css("background", fig);
+                vez = (vez == 1 ? 2 : 1);
+                verificarFimDeJogo();
+            }
+        });
+
+
+
+        
+        });
+</script>
