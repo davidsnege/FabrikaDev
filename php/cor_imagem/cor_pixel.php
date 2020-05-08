@@ -30,23 +30,26 @@ $im = imagecreatefromjpeg("stars.jpg");
 // Cogemos el tamaño de la imagem para poder hacer un foreach y recorrer colores
 $size = getimagesize("stars.jpg");
 print_r($size);
+// Aqui temos o mime que é o tipo. array de exemplo abaixo.
+// Array ( [0] => 3840 [1] => 2160 [2] => 2 [3] => width="3840" height="2160" [bits] => 8 [channels] => 3 [mime] => image/jpeg )
 
 
 
 
-
-$rgb = imagecolorat($im, 500, 1250);
+$rgb = imagecolorat($im, 595, 1250);
 $r = ($rgb >> 16) & 0xFF;
 $g = ($rgb >> 8) & 0xFF;
 $b = $rgb & 0xFF;
 
-echo "RGB <br>";
+echo "<br><br>RGB <br>";
 print_r($rgb);
 echo "<br> R - G - B  <br>";
 echo "<br> R: ";print_r($r);
 echo "<br> G: ";print_r($g);
 echo "<br> B: ";print_r($b);
 
+// Pintamos um div so pra ver a cor
+echo "<br>";
 echo '<br><div style="background-color:rgba('.$r.', '.$g.', '.$b.', 0.5);"> Hola Color </div>';
 
 
