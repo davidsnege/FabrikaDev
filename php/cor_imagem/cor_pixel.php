@@ -38,7 +38,7 @@ $mime = $size['mime'];
 $bits = $size['bits'];
 
 // Confirguracao de formacao de imagem
-$bwwb = "bw";
+$bwwb = "wb";
 $sensitive = "120";
 $wColor = "0";
 $bColor = "255";
