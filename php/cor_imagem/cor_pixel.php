@@ -38,9 +38,9 @@ $mime = $size['mime'];
 $bits = $size['bits'];
 
 // Confirguracao de formacao de imagem
-$bwwb = "wb";
-$sensitive = "245";
-$wColor = "000";
+$bwwb = "bw";
+$sensitive = "120";
+$wColor = "0";
 $bColor = "255";
 
 // Definimos que tipo de comando vamos usar por tipo de imagem
@@ -96,6 +96,17 @@ $gd = imagecreatetruecolor($x, $y);
                                 $b = $bColor;                    
                             }
                     break;
+                    case 'bwc': // bw Preto e Branco
+                            if($r && $g && $b >= $sensitive){
+                                $r = $wColor;
+                                $g = $wColor;
+                                $b = $wColor;
+                            }else{
+                                $r = $r;
+                                $g = $g;
+                                $b = $b;                    
+                            }
+                    break;
                     case 'wb': // wb Branco e Preto
                             if($r && $g && $b >= $sensitive){
                                 $r = $bColor;
@@ -105,6 +116,17 @@ $gd = imagecreatetruecolor($x, $y);
                                 $r = $wColor;
                                 $g = $wColor;
                                 $b = $wColor;                    
+                            }
+                    break;
+                    case 'wbc': // wb Branco e Preto
+                            if($r && $g && $b >= $sensitive){
+                                $r = $r;
+                                $g = $g;
+                                $b = $b;
+                            }else{
+                                $r = $bColor;
+                                $g = $bColor;
+                                $b = $bColor;                    
                             }
                     break;
                     case 'red': // bwc Preto e Branco Contraste Color
