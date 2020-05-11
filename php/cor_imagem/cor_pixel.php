@@ -1,7 +1,7 @@
 <?php
 
 // TODO 
-// saber o tipo de imagem para usar o imagecreate correto
+// saber o tipo de imagem para usar o imagecreate correto (extrair o tipo mime do array getimagesize)
 // usar o getimagesize para recorrer no comprimento e na altura os pixels
 // ver como construir um array com as informacoes
 // recorrer o array verificando se encontramos pontos com a cor especificada e guardar x/y para coordenadas
@@ -18,8 +18,37 @@
 // a partir disto detectar e marcar a imagem ou a sequencia como possivel NEO
 
 
-$im = imagecreatefromjpeg("stars.jpg");
-// Los tipos de imagenes aceitos
+
+//Defnimos a rota da imagem
+$image = "stars.jpg";
+
+// Cogemos el tamaño de la imagem para poder hacer un foreach y recorrer colores
+$size = getimagesize($image);
+$width = $size['0'];
+$height = $size['1'];
+$mime = $size['mime'];
+$bits = $size['bits'];
+
+// echo $height;
+// echo $width;
+
+// Definimos que tipo de comando vamos usar por tipo de imagem
+switch ($mime) {
+    case 'image/jpeg':
+        $im = imagecreatefromjpeg($image);
+        // echo "jpg";
+        break;
+    case 'image/png':
+        $im = imagecreatefrompng($image);
+        // echo "png";
+        break;
+    case 'image/bmp':
+        $im = imagecreatefromwbmp($image);
+        // echo "bmp";
+        break;
+}
+
+// Os tipos de imagens aceitos
 // IMAGETYPE_GIF => 'imagecreatefromgif',
 // IMAGETYPE_JPEG => 'imagecreatefromjpeg',
 // IMAGETYPE_PNG => 'imagecreatefrompng',
@@ -27,32 +56,40 @@ $im = imagecreatefromjpeg("stars.jpg");
 // IMAGETYPE_XBM => 'imagecreatefromwxbm',
 
 
-// Cogemos el tamaño de la imagem para poder hacer un foreach y recorrer colores
-$size = getimagesize("stars.jpg");
-print_r($size);
-// Aqui temos o mime que é o tipo. array de exemplo abaixo.
-// Array ( [0] => 3840 [1] => 2160 [2] => 2 [3] => width="3840" height="2160" [bits] => 8 [channels] => 3 [mime] => image/jpeg )
+// Construimos uma imagem com caracteres para ver a previa do que queremos dentro do array de estrelas.
+    echo '<div class="container">';
+        for ($h=0; $h < $height; $h++) { 
+            echo '<div class="row">';
+            for ($w=0; $w < $width; $w++) { 
+
+                $rgb = imagecolorat($im, $w, $h);
+                $r = ($rgb >> 16) & 0xFF;
+                $g = ($rgb >> 8) & 0xFF;
+                $b = $rgb & 0xFF;
+
+
+                // Aplicamos contraste de acordo com o RGB 
+                // Desta forma podemos ver somente as areas mais brancas ou mais negras da imagem
+                // Ver como fazer um toggle aqui para inverter as cores quando necessario
+                if($r && $g && $b <= 240){
+                    $r = 255;
+                    $g = 255;
+                    $b = 255;
+                }else{
+                    $r = 000;
+                    $g = 000;
+                    $b = 000;                    
+                }
 
 
 
-
-$rgb = imagecolorat($im, 595, 1250);
-$r = ($rgb >> 16) & 0xFF;
-$g = ($rgb >> 8) & 0xFF;
-$b = $rgb & 0xFF;
-
-echo "<br><br>RGB <br>";
-print_r($rgb);
-echo "<br> R - G - B  <br>";
-echo "<br> R: ";print_r($r);
-echo "<br> G: ";print_r($g);
-echo "<br> B: ";print_r($b);
-
-// Pintamos um div so pra ver a cor
-echo "<br>";
-echo '<br><div style="background-color:rgba('.$r.', '.$g.', '.$b.', 0.5);"> Hola Color </div>';
-
-
-
+                echo '<text id="w'.$w.'h'.$h.'" style="color:rgba('.$r.', '.$g.', '.$b.'); font-size: 4px; letter-spacing: -0px; line-height: 50%;">♦</text>';
+                //  ALT 254 / 176 / 177 / 178 / 220 / 4 /
+            }
+            echo '</div>';
+        }
+    echo '</div>';
+// **************************************************************
+    
 
 ?>
