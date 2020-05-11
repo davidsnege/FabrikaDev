@@ -39,7 +39,7 @@ $bits = $size['bits'];
 
 // Confirguracao de formacao de imagem
 $bwwb = "wb";
-$sensitive = "180";
+$sensitive = "245";
 $wColor = "000";
 $bColor = "255";
 
@@ -138,6 +138,39 @@ $gd = imagecreatetruecolor($x, $y);
                                 $r = $r;
                                 $g = $g;
                                 $b = $b;                                  
+                            }
+                    break;                  
+                    case 'redBlack': // bwc Preto e Branco Contraste Color
+                            if($r && $g && $b >= $sensitive){
+                                $r = 255;
+                                $g = 25;
+                                $b = 0;
+                            }else{
+                                $r = 255;
+                                $g = 255;
+                                $b = 255;                                  
+                            }
+                    break;                    
+                    case 'blueBlack': // bwc Preto e Branco Contraste Color
+                            if($r && $g && $b >= $sensitive){
+                                $r = 0;
+                                $g = 67;
+                                $b = 255;
+                            }else{
+                                $r = 255;
+                                $g = 255;
+                                $b = 255;                                  
+                            }
+                    break;                    
+                    case 'greenBlack': // bwc Preto e Branco Contraste Color
+                            if($r && $g && $b >= $sensitive){
+                                $r = 000;
+                                $g = 193;
+                                $b = 33;
+                            }else{
+                                $r = 255;
+                                $g = 255;
+                                $b = 255;                                    
                             }
                     break;                  
                 }
