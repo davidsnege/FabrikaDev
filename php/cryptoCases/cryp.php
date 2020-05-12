@@ -6,7 +6,7 @@
  * @subpackage  
  * @author      davidsnege <david.snege@gmail.com>
  * @copyright   2020 davidsnege (FabrikaDev)
- * @license     Licencia Somente para uso no ensino de Programação (Outros usos estão vetados)
+ * @license     Licença de uso Somente para uso no ensino de Programação (Outros usos estão vetados)
  */
 
 $hashed_password = crypt('mypassword', '20191202'); // dejar que el salt se genera automáticamente
