@@ -19,9 +19,9 @@ header ('Content-Type: image/png');
 
 //*************************************************************/
 //Defnimos a rota da imagem
-$image = "imgs/stars.jpg";
+$image = "imgs/h1.jpg";
 //*************************************************************/
-
+ 
 //*************************************************************/
 // Cogemos el tamaño de la imagem para poder hacer un foreach y recorrer colores
 $size = getimagesize($image);
