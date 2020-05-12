@@ -1,4 +1,14 @@
 <?php 
+/**
+ * @version     0.0.1
+ * @package     
+ * @subpackage  
+ * @author      davidsnege <david.snege@gmail.com>
+ * @copyright   2020 davidsnege (FabrikaDev)
+ * @license     Licencia Somente para uso no ensino de Programação (Outros usos estão vetados)
+ */
+
+ 
     //╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗
     //║  Envia os logs pela função enviaLog() para o arquivo que grava no TXT
     //║  Created By David Snege

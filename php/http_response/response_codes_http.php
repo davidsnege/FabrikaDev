@@ -1,4 +1,12 @@
 <?php
+/**
+ * @version     0.0.1
+ * @package     
+ * @subpackage  
+ * @author      davidsnege <david.snege@gmail.com>
+ * @copyright   2020 davidsnege (FabrikaDev)
+ * @license     Licencia Somente para uso no ensino de Programação (Outros usos estão vetados)
+ */
 
 // PODEMOS PASSAR OS STATUS DE CABEÇALHO HTTP POR CODIGO COMO ABAIXO
 header("HTTP/1.0 200 OK");

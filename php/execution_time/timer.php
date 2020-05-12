@@ -1,4 +1,14 @@
 <?php
+/**
+ * @version     0.0.1
+ * @package     
+ * @subpackage  
+ * @author      davidsnege <david.snege@gmail.com>
+ * @copyright   2020 davidsnege (FabrikaDev)
+ * @license     Licencia Somente para uso no ensino de Programação (Outros usos estão vetados)
+ */
+
+ 
 				$time_start = microtime(true);
 
 // Coloque todo seu código e queryes aqui e saiba ao final quanto demorou para executar o arquivo

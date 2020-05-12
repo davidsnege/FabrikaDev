@@ -11,6 +11,14 @@
 <body>
 <div class="container"><center>
 <?php
+/**
+ * @version     0.0.1
+ * @package     
+ * @subpackage  
+ * @author      davidsnege <david.snege@gmail.com>
+ * @copyright   2020 davidsnege (FabrikaDev)
+ * @license     Licencia Somente para uso no ensino de Programação (Outros usos estão vetados)
+ */
 
     //╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗
     //║  Script de exemplo para simular gerador de logs em um script PHP - Pedra, Papel, Tesoura

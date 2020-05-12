@@ -1,6 +1,14 @@
 <?php
+/**
+ * @version     0.0.1
+ * @package     
+ * @subpackage  
+ * @author      davidsnege <david.snege@gmail.com>
+ * @copyright   2020 davidsnege (FabrikaDev)
+ * @license     Licencia Somente para uso no ensino de Programação (Outros usos estão vetados)
+ */
 
-// Si você tiver problemas com CORS no console usar alguma destas técnicas pode te ajudar
+// Se você tiver problemas com CORS no console usar alguma destas técnicas pode te ajudar
 // O melhor é identificar a CDN ou de onde vem o erro CORS e arrumar
 // As opções abaixo são somente gambiarras
 
