@@ -6,6 +6,7 @@ include 'head.php';
 //HEADER
 include 'header.php';
 ?>
+<body class="bgbk">
 <?php
 //BODY
 include 'body.php';
@@ -14,3 +15,4 @@ include 'body.php';
 //FOOTER
 include 'footer.php';
 ?>
+</body>
