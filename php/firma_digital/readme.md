@@ -1,6 +1,4 @@
 * [Licensing](#licensing)
-* [Useful Links](#useful-links)
-
 
 ## Quick start
 
