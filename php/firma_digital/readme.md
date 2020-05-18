@@ -2,7 +2,7 @@
 * [Useful Links](#useful-links)
 
 
-## Demo
+<!-- ## Demo -->
 
 <!-- - [Start page](https://demos.creative-tim.com/black-dashboard/examples/dashboard.html)
 - [User profile page](https://demos.creative-tim.com/black-dashboard/examples/user.html)
@@ -25,7 +25,7 @@ The documentation for the Firma Digital is hosted at gitHub [website](http://dav
 Within the download you'll find the following directories and files:
 
 ```
-black-dashboard/
+firma_digital/
 ├── readme.md
 ├── app
 │   ├── images
