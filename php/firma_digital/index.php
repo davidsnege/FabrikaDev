@@ -1,7 +1,16 @@
 <!doctype html>
+<!-- /**
+ * @version     0.0.1
+ * @package     FabrikaDev
+ * @subpackage  Firma Digital
+ * @author      davidsnege <david.snege@gmail.com>
+ * @copyright   2020 davidsnege (FabrikaDev)
+ * @license     Licença de uso Somente para uso no ensino de Programação (Outros usos estão vetados)
+ */ -->
+
 <html lang="pt-br">
    <head>
-      <title></title>
+      <title>Firma Digital by: davidsnege  to: FabrikaDev</title>
 
       <!-- INDISPENSAVEL PARA O FUNCIONAMENTO PRINCIPALMENTE JQUERY/AJAX/SLIM/POPPER -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">

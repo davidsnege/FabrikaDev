@@ -1,4 +1,11 @@
-   
+//   /**
+//  * @version     0.0.1
+//  * @package     FabrikaDev
+//  * @subpackage  Firma Digital
+//  * @author      davidsnege <david.snege@gmail.com>
+//  * @copyright   2020 davidsnege (FabrikaDev)
+//  * @license     Licença de uso Somente para uso no ensino de Programação (Outros usos estão vetados)
+//  */
    
    
    // Funções de desenho en canvas com jquery
