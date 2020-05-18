@@ -19,7 +19,7 @@ header ('Content-Type: image/png');
 
 //*************************************************************/
 //Defnimos a rota da imagem
-$image = "imgs/h1.jpg";
+$image = "imgs/stars.jpg";
 //*************************************************************/
  
 //*************************************************************/
@@ -33,7 +33,7 @@ $bits = $size['bits'];
 
 //*************************************************************/
 // Confirguracao de formacao de imagem
-$bwwb = "wb";
+$bwwb = "wbc";
 $sensitive = "120";
 $wColor = "0";
 $bColor = "255";
