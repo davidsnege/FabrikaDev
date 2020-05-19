@@ -252,7 +252,4 @@ imagepng($gd);
 // IMAGETYPE_XBM => 'imagecreatefromwxbm',
 
 
-
-
-
 ?>
