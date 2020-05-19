@@ -4,6 +4,7 @@
 
 Repositório para o canal de youtube com os códigos dos vídeos tutoriais.
 O link para o canal: https://www.youtube.com/channel/UC0lgoT6I-SaX2dcimts4qRA
+O link para o canal antigo: https://www.youtube.com/channel/UC0tc5yNWoaO5ZeVE9u3Icsw
 
 # Qual o Objetivo.
 
