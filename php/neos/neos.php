@@ -20,7 +20,7 @@ error_reporting(0);
         $today = $_POST['dateIn'];
         $tomorrow = date('Y-m-d', strtotime('+3 days', strtotime($today)));
     }else{
-        $today = $fullDateToday;
+        $today = date("Y-m-d");
         $tomorrow = date('Y-m-d', strtotime('+3 days', strtotime($today)));
     }
 
