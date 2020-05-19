@@ -26,11 +26,31 @@ canvas da assinatura diretamente na base de dados.
 - Uma outra idéia futura é poder utilizar uma biblioteca do PHP para já inserir esta assinatura dentro de um documento PDF e assim
 poder salvar o documento en si, já com a assinatura incrustada dentro do mesmo.
 
-#### david snege
+### ES-es
 
-- Que a força esteja com você.
+- Firma Digital es un pequeño fragmento de código que creé para ayudar a otros desarrolladores que necesitan guardar
+firmas de clientes en formato de imagen o legitimar cualquier documento firmado en línea, utiliza bibliotecas JavaScript de
+otras personas que también tienen el formato de código abierto, por lo que este fragmento de código también es de código abierto y se puede descargar,
+usado, modificado a su gusto, para eso solo le pedimos que mantenga el código que comienza con el autor y que acceda a los datos a este
+github, en el futuro tengo la intención de dejar integrada una forma de guardar en la base de datos la dirección de la firma o los datos en sí
+lienzo de firma directamente en la base de datos.
 
+- Otra idea futura es poder usar una biblioteca PHP para insertar esta firma en un documento PDF y así
+para poder guardar el documento en sí, ya con la firma incrustada en él.
 
+### EN-en
+
+- Firma Digital is a small piece of code that I created in order to help other developers who need to save
+customer signatures in an image format or legitimize any document signed online, it uses JavaScript libraries from
+other people who have the Open Source format too, so this code snippet is also open source and can be downloaded,
+used, modified to your liking, for that we only ask you to keep the code starts with the author and access data to this
+github, in the future I intend to leave integrated a way of already saving in the database the direction of the signature or the data itself
+signature canvas directly in the database.
+
+- Another future idea is to be able to use a PHP library to already insert this signature into a PDF document and so
+to be able to save the document itself, already with the signature embedded within it.
+
+#### david snege - Que a força esteja com você.
 
 The documentation for the Firma Digital is hosted at gitHub or more information: davidsnege.com [website](http://davidsnege.com).
 
