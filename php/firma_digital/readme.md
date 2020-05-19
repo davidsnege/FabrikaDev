@@ -36,6 +36,11 @@ We use GitHub Issues as the official bug tracker for the Firma Digital. Here are
 ## Licensing
 
 - Copyright 2020 davidsnege (http://davidsnege.com/)
-
 - Licensed under Open Source
+
+## References and Libraries 
+
+- https://www.jqueryscript.net/other/Canvas-Signature-Pad-Sign.html
+- https://www.jqueryscript.net/other/Touch-enabled-Signature-Plugin-with-jQuery-Canvas.html
+- https://www.jqueryscript.net/other/Smooth-Signature-Pad-Plugin-with-jQuery-Html5-Canvas.html
 
