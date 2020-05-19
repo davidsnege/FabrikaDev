@@ -90,3 +90,6 @@ We use GitHub Issues as the official bug tracker for the Firma Digital. Here are
 - https://www.jqueryscript.net/other/Touch-enabled-Signature-Plugin-with-jQuery-Canvas.html
 - https://www.jqueryscript.net/other/Smooth-Signature-Pad-Plugin-with-jQuery-Html5-Canvas.html
 
+## Future Libraries to use
+
+- http://www.fpdf.org/
