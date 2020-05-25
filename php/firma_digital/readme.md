@@ -81,7 +81,7 @@ We use GitHub Issues as the official bug tracker for the Firma Digital. Here are
 
 ## Licensing
 
-- Copyright 2020 davidsnege (http://davidsnege.com/)
+- 2020 davidsnege (http://davidsnege.com/)
 - Licensed under Open Source
 
 ## References and Libraries 
