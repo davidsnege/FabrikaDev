@@ -24,7 +24,7 @@ github, no futuro pretendo deixar integrado um modo de já salvar na base de dad
 canvas da assinatura diretamente na base de dados.
 
 - Uma outra idéia futura é poder utilizar uma biblioteca do PHP para já inserir esta assinatura dentro de um documento PDF e assim
-poder salvar o documento en si, já com a assinatura incrustada dentro do mesmo.
+poder salvar o documento en si, já com a assinatura incrustada dentro do mesmo. (Veja o Final do arquivo na parte 'Future Libraries to Use')
 
 ### ES-es
 
@@ -36,7 +36,7 @@ github, en el futuro tengo la intención de dejar integrada una forma de guardar
 lienzo de firma directamente en la base de datos.
 
 - Otra idea futura es poder usar una biblioteca PHP para insertar esta firma en un documento PDF y así
-para poder guardar el documento en sí, ya con la firma incrustada en él.
+para poder guardar el documento en sí, ya con la firma incrustada en él. (Vea en el final del archivo 'Future Libraries to Use')
 
 ### EN-en
 
@@ -48,7 +48,7 @@ github, in the future I intend to leave integrated a way of already saving in th
 signature canvas directly in the database.
 
 - Another future idea is to be able to use a PHP library to already insert this signature into a PDF document and so
-to be able to save the document itself, already with the signature embedded within it.
+to be able to save the document itself, already with the signature embedded within it. (See the final in this file 'Future Libraries to Use')
 
 #### david snege - Que a força esteja com você.
 
