@@ -93,3 +93,27 @@ We use GitHub Issues as the official bug tracker for the Firma Digital. Here are
 ## Future Libraries to use
 
 - http://www.fpdf.org/
+
+### How to use FPDF to create your PDFs
+
+- Minimal Exemple : 
+-- http://www.fpdf.org/en/tutorial/tuto1.htm
+- Header, footer, page break and image : 
+-- http://www.fpdf.org/en/tutorial/tuto2.htm
+- Line breaks and colors
+-- http://www.fpdf.org/en/tutorial/tuto3.htm
+- Multi-columns
+-- http://www.fpdf.org/en/tutorial/tuto4.htm
+- Tables
+-- http://www.fpdf.org/en/tutorial/tuto5.htm
+- Links and flowing text
+-- http://www.fpdf.org/en/tutorial/tuto6.htm
+- Adding new fonts and encodings
+-- http://www.fpdf.org/en/tutorial/tuto7.htm
+
+#### Another examples
+
+- Exemple 1
+-- https://desarrolloweb.com/articulos/funcion-image-fpdf.html
+- Another Tutorial (9 parts)
+-- https://www.studentstutorial.com/fpdf/introduction.php
