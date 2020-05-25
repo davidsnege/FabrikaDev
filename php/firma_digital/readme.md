@@ -48,7 +48,7 @@ github, in the future I intend to leave integrated a way of already saving in th
 signature canvas directly in the database.
 
 - Another future idea is to be able to use a PHP library to already insert this signature into a PDF document and so
-to be able to save the document itself, already with the signature embedded within it. (See the final in this file 'Future Libraries to Use')
+to be able to save the document itself, already with the signature embedded within it. (See in final this file 'Future Libraries to Use')
 
 #### david snege - Que a força esteja com você.
 
