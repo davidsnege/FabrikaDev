@@ -36,6 +36,8 @@
             <button type="button" class="btn btn-primary top pull-right" value="Reset" id='resetSign'>Reset Assinatura</button>
          </div>
 
+
+         <div id="ler" name="ler"></div>
          <!-- Alguma coisa passa com os JS pois não aceita estar o canvas dentro de alguns elementos de bootstrap, perdendo a capacidade de se assinar -->
 
    </body>

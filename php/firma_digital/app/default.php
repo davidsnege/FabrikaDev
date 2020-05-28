@@ -35,3 +35,4 @@
 	$urlPDF = "pdfs/".$name.".pdf";
 	$pdf->Output('F', $urlPDF);
 
+	echo $urlPDF;
