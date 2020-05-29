@@ -9,8 +9,9 @@
 
 ![Product Gif](http://davidsnege.com/wp-content/uploads/2020/05/001.gif)
 
-
 ![Product Gif](http://davidsnege.com/wp-content/uploads/2020/05/002.jpg)
+
+![Product Gif](http://davidsnege.com/wp-content/uploads/2020/05/003.gif)
 
 ## Documentation
 
@@ -23,9 +24,6 @@ utilizado, modificado ao seu gosto, para isso só pedimos que mantenha os inicio
 github, no futuro pretendo deixar integrado um modo de já salvar na base de dados a direção da assinatura ou os próprios dados
 canvas da assinatura diretamente na base de dados.
 
-- Uma outra idéia futura é poder utilizar uma biblioteca do PHP para já inserir esta assinatura dentro de um documento PDF e assim
-poder salvar o documento en si, já com a assinatura incrustada dentro do mesmo. (Veja o Final do arquivo na parte 'Future Libraries to Use')
-
 ### ES-es
 
 - Firma Digital es un pequeño fragmento de código que creé para ayudar a otros desarrolladores que necesitan guardar
@@ -34,9 +32,6 @@ otras personas que también tienen el formato de código abierto, por lo que est
 usado, modificado a su gusto, para eso solo le pedimos que mantenga el código que comienza con el autor y que acceda a los datos a este
 github, en el futuro tengo la intención de dejar integrada una forma de guardar en la base de datos la dirección de la firma o los datos en sí
 lienzo de firma directamente en la base de datos.
-
-- Otra idea futura es poder usar una biblioteca PHP para insertar esta firma en un documento PDF y así
-para poder guardar el documento en sí, ya con la firma incrustada en él. (Vea en el final del archivo 'Future Libraries to Use')
 
 ### EN-en
 
@@ -47,9 +42,6 @@ used, modified to your liking, for that we only ask you to keep the code starts 
 github, in the future I intend to leave integrated a way of already saving in the database the direction of the signature or the data itself
 signature canvas directly in the database.
 
-- Another future idea is to be able to use a PHP library to already insert this signature into a PDF document and so
-to be able to save the document itself, already with the signature embedded within it. (See in final this file 'Future Libraries to Use')
-
 #### david snege - Que a força esteja com você.
 
 The documentation for the Firma Digital is hosted at gitHub or more information: davidsnege.com [website](http://davidsnege.com).
@@ -59,10 +51,12 @@ Within the download you'll find the following directories and files:
 
 ```
 firma_digital/
-├── readme.md
 ├── app
+│   ├── fpdf182
 │   ├── images
-│   │   └── imagesaved.png
+│   │   └── 20200529093125.png
+│   ├── pdfs
+│   │   └── 20200529093125.pdf
 │   ├── default.php
 ├── css
 │   └── style.css
@@ -72,7 +66,8 @@ firma_digital/
 │   └── sign.js
 ├── md
 │   └── filestoMDfile
-
+├── index.php
+├── readme.md
 ```
 
 ## Reporting Issues
@@ -84,13 +79,13 @@ We use GitHub Issues as the official bug tracker for the Firma Digital. Here are
 - 2020 davidsnege (http://davidsnege.com/)
 - Licensed under Open Source
 
-## References and Libraries 
+## Libraries JS JQUERY
 
 - https://www.jqueryscript.net/other/Canvas-Signature-Pad-Sign.html
 - https://www.jqueryscript.net/other/Touch-enabled-Signature-Plugin-with-jQuery-Canvas.html
 - https://www.jqueryscript.net/other/Smooth-Signature-Pad-Plugin-with-jQuery-Html5-Canvas.html
 
-## Future Libraries to use
+## Libraries PDF
 
 - http://www.fpdf.org/
 
@@ -117,3 +112,9 @@ We use GitHub Issues as the official bug tracker for the Firma Digital. Here are
 -- https://desarrolloweb.com/articulos/funcion-image-fpdf.html
 - Another Tutorial (9 parts)
 -- https://www.studentstutorial.com/fpdf/introduction.php
+
+# LOG 
+
+29/05/2020 11:37
+- Adicionado a possibilidade de gravar um PDF e exibir na tela depois de gravado
+- Se pode salvar o PDF pelo navegador
