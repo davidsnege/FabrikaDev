@@ -115,6 +115,17 @@ We use GitHub Issues as the official bug tracker for the Firma Digital. Here are
 
 # LOG 
 
-29/05/2020 11:37
-- Adicionado a possibilidade de gravar um PDF e exibir na tela depois de gravado
-- Se pode salvar o PDF pelo navegador
+## 29/05/2020 11:37
+
+- PT-BR 
+-- Adicionado a possibilidade de gravar um PDF e exibir na tela depois de gravado
+-- Se pode salvar o PDF pelo navegador
+
+- ES-es
+-- Se agregó la posibilidad de guardar un PDF y mostrarlo en la pantalla después de guardar
+-- Si puede guardar el PDF a través del navegador
+
+- EN-en
+-- Added the possibility to save a PDF and display it on the screen after saving
+-- You can save the PDF via the browser
+
