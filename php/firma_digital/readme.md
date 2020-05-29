@@ -113,7 +113,7 @@ We use GitHub Issues as the official bug tracker for the Firma Digital. Here are
 - Another Tutorial (9 parts)
 -- https://www.studentstutorial.com/fpdf/introduction.php
 
-# LOG 
+# Log 
 
 ## 29/05/2020 11:37
 
