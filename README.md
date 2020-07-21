@@ -3,7 +3,9 @@
 # Onde você esta? / ¿Donde estas?
 
 Repositório para o canal de youtube com os códigos dos vídeos tutoriais.
+
 Repositorio para el canal de youtube con los códigos de los videos tutoriales.
+
 - O link para o canal: https://www.youtube.com/channel/UC0lgoT6I-SaX2dcimts4qRA
 - O link para o canal antigo: https://www.youtube.com/channel/UC0tc5yNWoaO5ZeVE9u3Icsw
 
@@ -35,6 +37,7 @@ El material puede crecer mucho con el tiempo, pero las implementaciones no estar
 # Sobre o nome (fabrika.dev) e Logotipos, artes, imagens disponíveis / Sobre el nombre (fabrika.dev) y Logos, artes, imágenes disponibles.
 
 Não esta permitido o uso destas imagens, logotipos ou quaisquer artes do repositório que não seja para estudos ou divulgação do conteúdo do canal.
+
 No está permitido usar estas imágenes, logotipos o cualquier arte del repositorio que no sea para estudios o difusión del contenido del canal.
 
 Obrigado a todos!
