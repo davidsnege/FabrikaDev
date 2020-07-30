@@ -1,4 +1,4 @@
-![Capa](http://davidsnege.com/wp-content/uploads/2019/10/1.png)
+![Capa](https://drive.google.com/file/d/1ACDsRWhxV4gOpBg9RMAiTvZJzUQxuHae/view?usp=sharing)
 
 
 ## Version
