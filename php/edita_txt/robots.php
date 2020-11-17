@@ -1,14 +1,15 @@
-<?php
+            <?php
 /**
- * @version     0.0.1
- * @package     
- * @subpackage  
- * @author      davidsnege <david.snege@gmail.com>
- * @copyright   2020 davidsnege (FabrikaDev)
- * @license     Licença de uso Somente para uso no ensino de Programação (Outros usos estão vetados)
- */
-
+*@version0.0.1
+*@package
+*@subpackage
+*@authordavidsnege<david.snege@gmail.com>
+*@copyright2020davidsnege(FabrikaDev)
+*@licenseLicençadeusoSomenteparausonoensinodeProgramação(Outrosusosestãovetados)
+*/
+//
 $case="10";
 $punt="55";
 $many="15";
-$nuevo="200";      
+$nuevo="200";
+$nuevo="200";            ;      

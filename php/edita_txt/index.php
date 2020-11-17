@@ -29,7 +29,8 @@
             );
             $ctx = file_get_contents('robots.php', 1, $ctx);
             $ctx = str_replace(" ", "", $ctx);
-            $ctx = str_replace("&nbsp", "", $ctx);
+            $ctx = str_replace(";;", ";", $ctx);
+            $ctx = str_replace("            ", "", $ctx);
                 echo $ctx;
             ?>
             </textarea>

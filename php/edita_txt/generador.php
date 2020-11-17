@@ -35,7 +35,8 @@
             fclose($arquivo);
             // Sobrescribimos el archivo siempre que necesitamos
             $arquivo = fopen('robots.php','r+w+x+');
-            // $arquivo = str_replace(" ", "", $arquivo);
+            $arquivo = str_replace(" ", "", $arquivo);
+            $arquivo = str_replace(";;", ";", $arquivo);
 
             fwrite($arquivo, $value);
             // Cerramos despues de escribir
@@ -46,14 +47,14 @@
 
 
             //Si necesitas solo añadir lineas como en un archivo de log, utilizar la opcion 'a'
-            // if($value != ''){
-            // // ADICIONA LINHA NO ARQUIVO
-            // $fp = fopen('robots.php', 'a'); //Anade Lineas"
-            // for ($i=0; $i < 1; $i++) {
-            //     fwrite($fp, $value);
-            // }
-            // fclose($fp);
-            // }
+            if($value != ''){
+            // ADICIONA LINHA NO ARQUIVO
+            $fp = fopen('robots.php', 'a +'); //Anade Lineas"
+            for ($i=0; $i < 1; $i++) {
+                fwrite($fp, $value);
+            }
+            fclose($fp);
+            }
 
 
     //╚══════════════════════════════════════════════════════════════════════════════════════════════════════════╝
