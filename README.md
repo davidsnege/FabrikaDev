@@ -1,6 +1,3 @@
-![Capa](https://drive.google.com/file/d/1ACDsRWhxV4gOpBg9RMAiTvZJzUQxuHae/view?usp=sharing)
-
-
 ## Version
 [![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://badge.fury.io/gh/tterb%2FHyde)
 
