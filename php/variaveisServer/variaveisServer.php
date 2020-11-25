@@ -9,5 +9,7 @@
  */
 
     echo $_SERVER['PHP_SELF'];
+
+    echo __FILE__;
 ?>
   <!-- https://www.php.net/manual/es/reserved.variables.server.php -->

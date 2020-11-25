@@ -67,22 +67,22 @@
 
 				documentation();
 			}else{
-						//╔════════════════════════════════════════════════════════════════════════════════════════════════╗
-						//║  Conexion a la Base de Dados - Cerrar conexion siempre
-						//╚════════════════════════════════════════════════════════════════════════════════════════════════╝
-						//╔════════════════════════════════════════════════════════════════════════════════════════════════╗
-								$time_start = microtime(true);
-								$host="localhost";
-								$login="seu_login_mysql";
-								$senha="sua_senha";
-								$banco="seu_banco_de_dados";
-								$connection = new mysqli ($host, $login, $senha, $banco);
-								if ($connection->connect_error){
-								die("Conexao falhou:" .$connection->connect_error);
-								} else {
-								// echo "Conectado";
-								}
-						//╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+	//╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+	//║  Conexion a la Base de Dados - Cerrar conexion siempre
+	//╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+	//╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+			$time_start = microtime(true);
+			$host="localhost";
+			$login="seu_login_mysql";
+			$senha="sua_senha";
+			$banco="seu_banco_de_dados";
+			$connection = new mysqli ($host, $login, $senha, $banco);
+			if ($connection->connect_error){
+			die("Conexao falhou:" .$connection->connect_error);
+			} else {
+			// echo "Conectado";	
+			}
+	//╚════════════════════════════════════════════════════════════════════════════════════════════════╝
 	//╔══════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 	//║  Pillamos las variables que necesitamos pra cualquer pesquisa
 	//║  Con los parametros basicos decidimos por lo que vamos buscar en la base
