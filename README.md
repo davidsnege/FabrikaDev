@@ -1,5 +1,5 @@
 ## Version
-[![Version](https://badge.fury.io/gh/tterb%2FHyde.svg)](https://badge.fury.io/gh/tterb%2FHyde)
+0.0.0.1
 
 ## Onde você esta? / ¿Donde estas?
 
